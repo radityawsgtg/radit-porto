@@ -1,65 +1,90 @@
 import Image from "next/image";
+import Handron from "next/font/local";
+import Eureka from "next/font/local";
+
+const handron = Handron({ 
+  src: '../../public/fonts/Handron-Solid.otf',
+  variable: '--font-handron'
+});
+
+const eureka = Eureka({ 
+  src: '../../public/fonts/Euskadi-Regular.otf',
+  variable: '--font-eureka'
+});
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    // Main menjadi kontainer utama yang memegang koordinat (relative)
+    <main className="relative min-h-screen w-full">
+      
+      {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/bg.png"
+          alt="Background"
+          fill
+          className="object-cover"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+      </div>
+
+      {/* 2. LAYER CONTENT: Teks berada di atas gambar menggunakan z-10 */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-[#FFD88C] [text-shadow:0_4px_8px_#1E368F]">
+        <h1 className={`text-[64px] font-bold ${eureka.className}`}>
+          Welcome To!
+        </h1>
+        <p className={`mt-4 text-lg ${handron.className} text-[96px] text-center leading-tight text-[#FFD88C] `}>
+          Raditya Work <br/>Place!
+        </p>
+      </div>
+
+      <div className="flex relativeflex-row items-center justify-center gap-20 px-20 py-20 z-20 mt-230">
+        <div className="relative w-[524px] h-[710px] ">
+          <Image
+            src="/Vector 1.png"
+            alt="Vector1"
+            fill
+            className="object-contain"
+            priority
+          />    
+        </div>
+
+        <div className="relative max-w-xl text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50]">
+          <h2 className={`text-[54px] font-bold text-center ${handron.className}`}>HI PAL!</h2>
+          <p className={`mt-4 leading-relaxed text-sm `}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt finibus risus in ullamcorper. Aliquam erat volutpat. Proin vitae nunc a nibh ullamcorper tempus. Praesent a iaculis felis, sed efficitur ipsum.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </div>
+
+      <div className = "relative w-full z-10 py-20">
+        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg">
+          <span className="text-2xl font-bold text-[#5C1A1B]">{'<'}</span>
+        </button>
+
+        <div className="w-[424px] h-[550px] rounded-[32px] flex-col flex bg-[#FFC76E] mx-auto mt-10 shadow-lg justify-center items-center">
+          <div className=" relative w-[327px] h-[206px] ">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+              src="/Rectangle 5873.png"
+              alt="Vector2"
+              fill
+              className="object-contain p-2"
+              priority
+            />    
+          </div>
+          <div className="rounded-[32px] bg-[#f8a012] flex">
+            <h2 className={`text-[40px] font-bold text-center p-6  ${handron.className}`}>My Workspace</h2>
+          </div>
+          
         </div>
-      </main>
-    </div>
+
+        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg float-right">
+          <span className="text-2xl font-bold text-[#5C1A1B]">{'>'}</span>
+        </button>
+
+      </div>
+
+
+
+    </main>
   );
 }
