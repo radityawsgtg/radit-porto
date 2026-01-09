@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Handron from "next/font/local";
 import Eureka from "next/font/local";
+import { Roboto } from "next/font/google";
 
 const handron = Handron({ 
   src: '../../public/fonts/Handron-Solid.otf',
   variable: '--font-handron'
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
 });
 
 const eureka = Eureka({ 
@@ -56,12 +63,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className = "relative w-full z-10 py-20">
-        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg">
+      <div className = "relative  px-10 z-10 py-20 items-center justify-center flex flex-row gap-20 ">
+        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg relative">
           <span className="text-2xl font-bold text-[#5C1A1B]">{'<'}</span>
         </button>
 
-        <div className="w-[424px] h-[550px] rounded-[32px] flex-col flex bg-[#FFC76E] mx-auto mt-10 shadow-lg justify-center items-center">
+        <div className="w-[424px] h-[550px] rounded-[32px] flex-col flex bg-[#FFC76E] mx-auto mt-10 shadow-lg justify-center items-center border-[#FF9955] border-4">
           <div className=" relative w-[327px] h-[206px] ">
             <Image
               src="/Rectangle 5873.png"
@@ -71,9 +78,10 @@ export default function Home() {
               priority
             />    
           </div>
-          <div className="rounded-[32px] bg-[#f8a012] flex">
-            <h2 className={`text-[40px] font-bold text-center p-6  ${handron.className}`}>My Workspace</h2>
+          <div className="rounded-4xl bg-[#FFD88C] flex bg-linear-to-t from-[#FFB366] to-[#FFD88C] shadow-md mt-4 border-[#FFB366] border-4 text-[#87095A]">
+            <h2 className={`text-[40px] font-bold text-center py-2 px-10  ${handron.className}`}>My Workspace</h2>
           </div>
+          <h3 className={`text-[24px] text-[#590844] font-bold p-6 text-center mt-4  ${roboto.className}`}>Radit Porto Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quos tenetur, dolorem explicabo odio quis.</h3>
           
         </div>
 
