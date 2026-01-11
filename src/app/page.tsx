@@ -3,7 +3,7 @@ import Image from "next/image";
 import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
-import {ProjectData, WebsiteToolsData} from '@/data/project.js';
+import {BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData} from '@/data/project.js';
 import { use } from "react";
 import { useState } from "react";
 
@@ -135,10 +135,10 @@ export default function Home() {
       </div>
 
       <div className="z-20 flex flex-col items-center justify-center py-20 px-10 relative">
-        <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
+        <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${roboto.className}`}>Tools and Technologies</h2>
         <div className=" rounded-2xl bg-[#340F5C] z-10 w-[1540px] h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-row flex-wrap justify-center items-center gap-10 p-2">
-          <div className="p-4 bg-[#340F5C] w-full h-full rounded-2xl flex flex-row flex-wrap justify-center items-center gap-10">
-            <h3 className={`text-[32px] font-bold text-center w-full text-[#FFD88C] ${roboto.className}`}>Frontend</h3>
+          <div className="p-4 bg-[#340F5C] w-full h-full rounded-2xl flex flex-row flex-wrap justify-center items-center gap-3">
+            <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Frontend</h3>
             <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
               {WebsiteToolsData.map((tool,index) => (
                 <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
@@ -147,10 +147,24 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <h3 className={`text-[32px] font-bold text-center w-full text-[#FFD88C] ${handron.className}`}>Frontend</h3>
-            <div className="flex flex-row flex-wrap justify-center items-center rounded-2xl gap-10 bg-amber-50 w-full h-9">
-            
-          </div>
+            <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Backend</h3>
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+              {BackendToolsData.map((tool,index) => (
+                <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
+                  <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
+                  <h3 className={`text-[20px] px-3 ${roboto.className}`}>{tool.name}</h3>
+                </span>
+              ))}
+            </div>
+            <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Database</h3>
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+              {DatabaseToolsData.map((tool,index) => (
+                <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
+                  <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
+                  <h3 className={`text-[20px] px-3 ${roboto.className}`}>{tool.name}</h3>
+                </span>
+              ))}
+            </div>
 
         </div>
         </div>

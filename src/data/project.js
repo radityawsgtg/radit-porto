@@ -1,3 +1,5 @@
+import { Bacasime_Antique } from "next/font/google";
+
 export const ProjectData = [
     {
 
@@ -49,6 +51,12 @@ export const ProjectData = [
         technologies: ["React", "Node.js", "MongoDB", "Express"],
     },
 ];
+export const BackendToolsData = [
+    {id: 1, name: "Node.js", imageUrl: "/icons/nodejs-icon.png"},
+    {id: 2, name: "Express", imageUrl: "/icons/express-icon.png"},
+    {id: 3, name: "Django", imageUrl: "/icons/django-icon.png"},
+    {id: 4, name: "Ruby on Rails", imageUrl: "/icons/rubyonrails-icon.png"}
+];
 
 export const WebsiteToolsData = [
     {id: 1, name: "React" , imageUrl: "/react.png"},
@@ -59,10 +67,10 @@ export const WebsiteToolsData = [
 ];
 
 export const DatabaseToolsData = [
-    "MongoDB",
-    "MySQL",
-    "PostgreSQL",
-    "Firebase"
+    {id: 1, name: "MongoDB", imageUrl: "/icons/mongodb-icon.png"},
+    {id: 2, name: "MySQL", imageUrl: "/icons/mysql-icon.png"},
+    {id: 3, name: "PostgreSQL", imageUrl: "/icons/postgresql-icon.png"},
+    {id: 4, name: "SQLite", imageUrl: "/icons/sqlite-icon.png"}
 ];
 export const OtherToolsData = [
     "Git",
@@ -77,3 +85,4 @@ export const Design = [
     "Photoshop",
     "Adobe Illustrator"
 ];
+
