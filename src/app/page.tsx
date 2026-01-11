@@ -1,8 +1,13 @@
+"use client";
 import Image from "next/image";
 import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
-import {ProjectData} from '@/data/project.js';
+import {ProjectData, WebsiteToolsData} from '@/data/project.js';
+import { use } from "react";
+import { useState } from "react";
+
+
 
 const handron = Handron({ 
   src: '../../public/fonts/Handron-Solid.otf',
@@ -20,8 +25,31 @@ const eureka = Eureka({
   variable: '--font-eureka'
 });
 
+
+
 export default function Home() {
+
+   {/*logika dari project section}*/}
+
+      const [currentPage, setcurrentPage] = useState(0);
+
+      const NextPage = () => {
+        if (currentPage + 3 < ProjectData.length) {
+          setcurrentPage(currentPage + 1);
+        }
+      };
+
+      const PrevPage = () => {
+        if (currentPage > 0) {
+          setcurrentPage(currentPage - 1);
+        }
+      };
+
+      const displayedProjects = ProjectData.slice(currentPage, currentPage + 3);
+
   return (
+
+
     // Main menjadi kontainer utama yang memegang koordinat (relative)
     <main className="relative min-h-screen w-full">
       
@@ -45,7 +73,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex relativeflex-row items-center justify-center gap-20 px-20 py-20 z-20 mt-230">
+      <div className="flex relative flex-row items-center justify-center gap-20 px-20 py-20 z-20 mt-230">
         <div className="relative w-[524px] h-[710px] ">
           <Image
             src="/Vector 1.png"
@@ -63,16 +91,22 @@ export default function Home() {
           </p>
         </div>
       </div>
+    
 
       {/* Project Section */}
+      <h2 className={`text-[48px] font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
+
     
-      <div className="relative px-10 z-10 py-20 items-center justify-center flex flex-row gap-20">
-        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg relative">
-          <span className="text-2xl font-bold text-[#5C1A1B]">{'<'}</span>
+      <div className="relative px-10 z-10 py-3 items-center justify-center flex flex-row gap-20">
+        <button 
+        onClick={PrevPage}
+        disabled={currentPage === 0}
+        className={`bg-[#FFB142] p-4 rounded-full shadow-lg relative ${currentPage === 0 ? 'opacity-50' : 'active:scale-95'}`}>
+          <span className={"text-2xl font-bold text-[#5C1A1B]"}>{'<'}</span>
         </button>
 
         {/* Card Project  Maping data*/}
-        {ProjectData.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div key={index} className="w-[424px] h-[550px] rounded-[32px] flex-col flex bg-[#FFC76E] mx-auto mt-10 shadow-lg justify-center items-center border-[#FF9955] border-4">
             <div className=" relative w-[327px] h-[206px] ">
               <Image
@@ -83,17 +117,44 @@ export default function Home() {
                 priority
               />    
             </div>
+
             <div className="rounded-4xl bg-[#FFD88C] flex bg-linear-to-t from-[#FFB366] to-[#FFD88C] shadow-md mt-4 border-[#FFB366] border-4 text-[#87095A]">
-              <h2 className={`text-[40px] font-bold text-center py-2 px-10  ${handron.className}`}>{project.title}</h2>
+              <h2 className={`text-[30px] font-bold text-center py-2 px-10  ${handron.className}`}>{project.title}</h2>
             </div>
-            <h3 className={`text-[24px] text-[#590844] font-bold p-6 text-center mt-4  ${roboto.className}`}>{project.description}</h3>
+            <h3 className={`text-[20px] text-[#590844] font-bold p-6 text-center mt-4  ${roboto.className}`}>{project.description}</h3>
             
           </div>
         ))}
 
-        <button className="bg-[#FFB142] p-4 rounded-full shadow-lg float-right">
+        <button 
+        onClick={NextPage}
+        disabled={currentPage + 3 >= ProjectData.length}
+        className={`bg-[#FFB142] p-4 rounded-full shadow-lg float-right ${currentPage + 3 >= ProjectData.length ? 'opacity-50' : 'active:scale-95'}`}>
           <span className="text-2xl font-bold text-[#5C1A1B]">{'>'}</span>
         </button>
+      </div>
+
+      <div className="z-20 flex flex-col items-center justify-center py-20 px-10 relative">
+        <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
+        <div className=" rounded-2xl bg-[#340F5C] z-10 w-[1540px] h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-row flex-wrap justify-center items-center gap-10 p-2">
+          <div className="p-4 bg-[#340F5C] w-full h-full rounded-2xl flex flex-row flex-wrap justify-center items-center gap-10">
+            <h3 className={`text-[32px] font-bold text-center w-full text-[#FFD88C] ${roboto.className}`}>Frontend</h3>
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+              {WebsiteToolsData.map((tool,index) => (
+                <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
+                  <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
+                  <h3 className={`text-[20px] px-3 ${roboto.className}`}>{tool.name}</h3>
+                </span>
+              ))}
+            </div>
+            <h3 className={`text-[32px] font-bold text-center w-full text-[#FFD88C] ${handron.className}`}>Frontend</h3>
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-2xl gap-10 bg-amber-50 w-full h-9">
+            
+          </div>
+
+        </div>
+        </div>
+        
 
       </div>
 
