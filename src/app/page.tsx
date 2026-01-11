@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* 2. LAYER CONTENT: Teks berada di atas gambar menggunakan z-10 */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-[#FFD88C] [text-shadow:0_4px_8px_#1E368F]">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-[#FFD88C] [text-shadow:0_4px_8px_#1E368F70]">
         <h1 className={`text-[64px] font-bold ${eureka.className}`}>
           Welcome To!
         </h1>
@@ -135,11 +135,11 @@ export default function Home() {
       </div>
 
       <div className="z-20 flex flex-col items-center justify-center py-20 px-10 relative">
-        <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${roboto.className}`}>Tools and Technologies</h2>
+        <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
         <div className=" rounded-2xl bg-[#340F5C] z-10 w-[1540px] h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-row flex-wrap justify-center items-center gap-10 p-2">
           <div className="p-4 bg-[#340F5C] w-full h-full rounded-2xl flex flex-row flex-wrap justify-center items-center gap-3">
             <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Frontend</h3>
-            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-[#fff1d2] w-full h-15">
               {WebsiteToolsData.map((tool,index) => (
                 <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
                   <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
@@ -148,7 +148,7 @@ export default function Home() {
               ))}
             </div>
             <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Backend</h3>
-            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-[#fff1d2] w-full h-15">
               {BackendToolsData.map((tool,index) => (
                 <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
                   <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
@@ -157,7 +157,7 @@ export default function Home() {
               ))}
             </div>
             <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Database</h3>
-            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-amber-50 w-full h-15">
+            <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-[#fff1d2] w-full h-15">
               {DatabaseToolsData.map((tool,index) => (
                 <span key={index} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center">
                   <img src={tool.imageUrl} alt={tool.name} className="inline-block ml-2 w-6 h-6"/>
@@ -172,7 +172,13 @@ export default function Home() {
 
       </div>
 
-
+      <img
+        src="/btm.png"
+        alt="Bottom Decor"
+        width={1920}
+        height={200}
+        className="bottom-0 left-0 w-full h-auto z-20 relative"
+      />
 
     </main>
   );

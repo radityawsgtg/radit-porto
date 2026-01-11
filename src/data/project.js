@@ -60,10 +60,10 @@ export const BackendToolsData = [
 
 export const WebsiteToolsData = [
     {id: 1, name: "React" , imageUrl: "/react.png"},
-    {id: 2, name: "Next.js", imageUrl: "/icons/nextjs-icon.png"},
-    {id: 3, name: "Tailwind CSS", imageUrl: "/icons/tailwind-icon.png"},
-    {id: 4, name: "JavaScript", imageUrl: "/icons/javascript-icon.png"},
-    {id: 5, name: "TypeScript", imageUrl: "/icons/typescript-icon.png"}
+    {id: 2, name: "Next.js", imageUrl: "/nextjs-icon.png"},
+    {id: 3, name: "Tailwind CSS", imageUrl: "/Tailwind.svg"},
+    {id: 4, name: "JavaScript", imageUrl: "/java.png"},
+    {id: 5, name: "TypeScript", imageUrl: "/typescript.png"}
 ];
 
 export const DatabaseToolsData = [
