@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import {BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData} from '@/data/project.js';
 import { use } from "react";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 
 
@@ -49,9 +50,12 @@ export default function Home() {
 
   return (
 
+    
+
 
     // Main menjadi kontainer utama yang memegang koordinat (relative)
     <main className="relative min-h-screen w-full">
+      <Navbar />
       
       {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
       <div className="absolute inset-0 z-0">
