@@ -51,8 +51,6 @@ export default function Home() {
   return (
 
     
-
-
     // Main menjadi kontainer utama yang memegang koordinat (relative)
     <main className="relative min-h-screen w-full">
       <Navbar />
@@ -101,7 +99,7 @@ export default function Home() {
       <h2 className={`text-[48px] font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
 
     
-      <div className="relative px-10 z-10 py-3 items-center justify-center flex flex-row gap-20">
+      <div className="relative px-10 z-10 py-3 items-center justify-center flex flex-row gap-10 w-full">
         <button 
         onClick={PrevPage}
         disabled={currentPage === 0}
@@ -140,7 +138,7 @@ export default function Home() {
 
       <div className="z-20 flex flex-col items-center justify-center py-20 px-10 relative">
         <h2 className={`flex text-[48px] font-bold text-center mb-10  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
-        <div className=" rounded-2xl bg-[#340F5C] z-10 w-[1540px] h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-row flex-wrap justify-center items-center gap-10 p-2">
+        <div className=" rounded-2xl bg-[#340F5C] z-10 w-full h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-row flex-wrap justify-center items-center gap-10 p-2">
           <div className="p-4 bg-[#340F5C] w-full h-full rounded-2xl flex flex-row flex-wrap justify-center items-center gap-3">
             <h3 className={`text-[32px] font-bold text-left w-full text-[#FFD88C] ${roboto.className}`}>Frontend</h3>
             <div className="flex flex-row flex-wrap justify-center items-center rounded-4xl gap-10 bg-[#fff1d2] w-full h-15">
