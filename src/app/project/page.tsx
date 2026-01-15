@@ -40,6 +40,9 @@ export default function ProjectPage() {
                 <h1 className={`text-4xl font-bold mb-6 ${roboto.className}`}>My Projects</h1>
                 {/* Tambahkan daftar proyek atau konten lainnya di sini */}
             </div>
+            <div className="rounded-l-2xl bg-yellow-300 w-1 h-1.5"> // buat comit aja lolll
+
+            </div>
 
         </main>
 
