@@ -7,6 +7,7 @@ import {BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData} from
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { GitHubCalendar } from "react-github-calendar";
 
 
 
@@ -35,7 +36,7 @@ export default function ProjectPage() {
     return (
         <main className="relative min-h-screen w-full pt-20">
             <Navbar />
-            <h2 className={`text-[48px] font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
+            <h2 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
 
             {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
             <div className="absolute inset-0 z-0 bg-[#17052A]">
@@ -47,12 +48,23 @@ export default function ProjectPage() {
                 />
             </div>
             {/* Konten halaman project dapat ditambahkan di sini */}
-            <div className="relative z-10 p-10 text-white">
-                <h1 className={`text-4xl font-bold mb-6 ${roboto.className}`}>My Projects</h1>
-                {/* Tambahkan daftar proyek atau konten lainnya di sini */}
-            </div>
-            <div className="rounded-l-2xl bg-yellow-300 w-1 h-1.5">     
-                <h1 className="text-black">.</h1>
+            <div className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_text]:fill-white p-8 bg-[#FFFFFF10] backdrop-blur-md border border-[#FFFFFF20] ">
+                <GitHubCalendar
+                    username="radityawsgtg"
+                    blockSize={15}
+                    blockMargin={5}
+                    fontSize={16}
+                    colorScheme="light"
+                    labels={{ 
+                        totalCount: "Kontribusi dalam setahun",
+                        months: "Jan Feb Mar Apr Mei Jun Jul Agu Sep Okt Nov Des".split(" "),
+                        legend: { less: "Sedikit",
+                            more: "Banyak"}
+                    }
+                    }
+                />
+                <h3 className={`text-[#BB83FF] text-center mt-4 ${eureka.className}`}>As a developer, GitHub plays a vital role in showcasing my projects and tracking my growth. Each green square represents a day of coding, contributing to open-source projects, and continuously learning in the field of software development.</h3>
+
             </div>
 
         </main>
