@@ -48,7 +48,7 @@ export default function ProjectPage() {
                 />
             </div>
             {/* Konten halaman project dapat ditambahkan di sini */}
-            <div className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_text]:fill-white p-8 bg-[#FFFFFF10] backdrop-blur-md border border-[#FFFFFF20] ">
+            <div className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_span]:text-white [&_text]:fill-white p-8 bg-[#FFFFFF10] border-2 backdrop-blur-md border border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300">
                 <GitHubCalendar
                     username="radityawsgtg"
                     blockSize={15}
