@@ -31,7 +31,7 @@ const eureka = Eureka({
 
 export default function Home() {
 
-   {/*logika dari project section}*/}
+  {/*logika dari project section}*/}
 
       const [currentPage, setcurrentPage] = useState(0);
 
