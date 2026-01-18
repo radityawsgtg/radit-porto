@@ -13,7 +13,7 @@ const roboto = Roboto({
 const navLink = [
     {name: "Home", href: '/', key: 'home', icon: '/home-icon.svg'},
     {name: "Project", href: '/project', key: 'project', icon: '/project-icon.svg'},
-    {name: "Vision", href: '/about', key: 'about', icon: '/vision-icon.svg'},
+    {name: "Vision", href: '/vision', key: 'about', icon: '/vision-icon.svg'},
     {name: "Awards", href: '/awards', key: 'awards', icon: '/awards-icon.svg'},
     {name: "About Me", href: '/aboutme', key: 'aboutme', icon: '/aboutme-icon.svg'},
 ];
