@@ -3,10 +3,11 @@ import Image from "next/image";
 import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
-import {BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData} from '@/data/project.js';
+import {BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData} from '@/data/news.js';
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import ProjectCard from "@/components/project";
 
 
 
