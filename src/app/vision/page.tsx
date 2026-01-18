@@ -42,7 +42,7 @@ export default function VisionPage() {
             <div className="flex relative flex-row items-center justify-center z-10 p-5 gap-10 mx-auto max-w-6xl">
             
                 {/* KOTAK KUNING (Sekarang kita beri flex agar isinya ke samping) */}
-                <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-2 border-[#FFB366] overflow-hidden">
+                <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
                     
                     {/* KOLOM KIRI: GAMBAR */}
                     <div className="w-full md:w-1/2 p-10">
@@ -67,7 +67,7 @@ export default function VisionPage() {
             <div className="flex relative flex-row items-center justify-center z-10 p-5 gap-10 mx-auto max-w-6xl">
             
                 {/* KOTAK KUNING (Sekarang kita beri flex agar isinya ke samping) */}
-                <div className=" items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-2 border-[#FFB366] overflow-hidden">
+                <div className=" items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
                     
                     {/* KOLOM KANAN: TULISAN */}
                     <div className="w-full p-10">
@@ -85,6 +85,10 @@ export default function VisionPage() {
                 height={200}
                 className=" left-0 w-full h-auto z-20 relative"
             />
+
+            <div>
+
+            </div>
 
         
 
