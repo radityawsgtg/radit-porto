@@ -84,6 +84,32 @@ export default function VisionPage() {
                 <CardPhoto/>     
                 
             </section>
+
+            <h2 className={`text-[48px] pt-25 font-bold text-center  text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Why im here?</h2>
+
+            <div className=" flex relative flex-col items-center">
+                <div className="gap-4 w-full mt-8 ">
+                    <h3 className="text-[#FFD88C] text-center mx-auto max-w-150 mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et soluta praesentium non eligendi error, esse quis dolorem fuga neque. 
+                    Beatae numquam aliquam possimus illum molestiae officia animi consectetur doloremque voluptates
+                    quibusdam magni eaque in velit assumenda quam ex, sapiente obcaecati?</h3>
+            
+                    <div className="w-fit mx-auto h-auto bg-amber p-2 rounded-lg border-2 bg-[#A288D1]  border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
+                    <Image src="/medium.svg" alt="Next" width={100} height={100} />
+                </div>
+            </div>
+            
+            </div>
+
+                <img
+                    src="/btm.png"
+                    alt="Bottom Decor"
+                    width={1920}
+                    height={200}
+                    className="bottom-0 left-0 w-full h-auto z-20 relative"
+                />
+
+            
+            
         </main>     
         );
 }
