@@ -8,6 +8,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
+import CardPhoto from "@/components/cardphoto";
 
 
 
@@ -75,6 +76,8 @@ export default function ProjectPage() {
                 height={200}
                 className="bottom-0 left-0 w-full h-auto z-20 relative"
             />
+
+            
 
 
         </main>
