@@ -8,6 +8,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import CardPhoto from "@/components/cardphoto";
+import Cardvision from "@/components/cardvision";
 
 const handron = Handron({ 
   src: '../../../public/fonts/Handron-Solid.otf',
@@ -45,7 +46,7 @@ export default function VisionPage() {
                 <h2 className={`text-[48px] pt-15 font-bold text-center mb-5 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>VISION</h2>
                 
                 {/* Konten Vision */}
-                <div className="flex flex-row items-center justify-center p-5 gap-10 mx-auto max-w-6xl">
+                <div className="flex flex-row items-center justify-center p-5 gap-10 mx-auto max-w-4xl">
                     <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
                     <div className="w-full md:w-1/2 p-10">
                         <img src="/Rectangle 5873.png" alt="Vision" className="w-full h-auto object-cover rounded-2xl" />
@@ -59,7 +60,7 @@ export default function VisionPage() {
                 <h2 className={`text-[48px] pt-15 font-bold text-center mb-5 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>MISION</h2>
                 
                 {/* Konten Mission */}
-                <div className="flex flex-row items-center justify-center p-10 pb-50 gap-10 mx-auto max-w-6xl">
+                <div className="flex flex-row items-center justify-center p-10 pb-50 gap-10 mx-auto max-w-4xl">
                     <div className="items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
                     <div className="w-full p-10">
                         <p className={`text-[#6F0E4E] text-center text-lg font-medium ${roboto.className}`}>My mission is...</p>
@@ -78,10 +79,8 @@ export default function VisionPage() {
             </section>
 
             {/* SEKSI BAWAH (Setelah Gunung) */}
-            <section className="bg-[#17052A] relative flex flex-row z-10 pt-70 gap-10">
-                <CardPhoto/>  
-                <CardPhoto/>   
-                <CardPhoto/>     
+            <section className="bg-[#17052A] relative   z-10 pt-70 gap-10 items-center">
+                <Cardvision/>    
                 
             </section>
 

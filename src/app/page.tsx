@@ -132,7 +132,7 @@ export default function Home() {
       <div className="z-20 flex flex-col items-center justify-center py-20 px-4 md:px-10 relative">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-10 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
         
-        <div className="rounded-2xl bg-[#340F5C] z-10 w-full max-w-6xl min-h-[527px] bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg flex flex-col p-6 md:p-10 gap-8">
+        <div className="rounded-2xl bg-[#340F5C] z-10 w-full max-w-6xl min-h-[527px]  border-4 border-[#340F5C] bg-linear-to-b from-[#58199c] to-[#471F72] shadow-lg flex flex-col p-6 md:p-10 gap-8">
           
           {/* Reusable Category Component */}
           {[
@@ -141,7 +141,7 @@ export default function Home() {
             { title: "Database", data: DatabaseToolsData }
           ].map((cat, idx) => (
             <div key={idx} className="flex flex-col gap-4">
-              <h3 className={`text-[24px] md:text-[32px] font-bold text-[#FFD88C] ${roboto.className}`}>{cat.title}</h3>
+              <h3 className={`text-[24px] md:text-[32px] font-bold drop-shadow-sm drop-shadow-[#340F5C]  text-[#FFD88C] ${eureka.className}`}>{cat.title}</h3>
               <div className="flex flex-wrap justify-start items-center rounded-2xl md:rounded-full gap-4 p-4 bg-[#fff1d2]/10 w-full min-h-[60px]">
                 {cat.data.map((tool, i) => (
                   <span key={i} className="text-[#590844] font-bold px-4 py-2 bg-[#FFD88C] rounded-full shadow-md flex items-center transition-transform hover:scale-105">
