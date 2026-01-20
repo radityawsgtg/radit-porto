@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
 import CardPhoto from "@/components/cardphoto";
+import CardAward from "@/components/cardawards";
+import { AwardsData } from "@/data/awards";
 
 const handron = Handron({ 
   src: '../../../public/fonts/Handron-Solid.otf',
@@ -36,7 +38,18 @@ export default function awardsPage (){
                 
                 <div className="relative z-10 pt-20">
                     <h2 className={`text-[48px] pt-15 font-bold text-center mb-5 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>AWARDS</h2>
-                    <ProjectCard/>
+                       {/* MAPPING DATA KE KOMPONEN */}
+                        <div className="flex flex-col gap-10">
+                        {AwardsData.map((award) => (
+                            <CardAward 
+                            key={award.id}
+                            title={award.title}
+                            description={award.description}
+                            narasumber={award.narasumber}
+                            image={award.image}
+                            />
+                        ))}
+                        </div>
 
                     <img
                     src="/btm.png"
