@@ -4,6 +4,7 @@ import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
 
+
 // Inisialisasi font (Pastikan path benar)
 const handron = Handron({ 
   src: '../../public/fonts/Handron-Solid.otf',

@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
+import Handron from "next/font/local";
+import Eureka from "next/font/local";
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -14,11 +17,21 @@ interface AwardProps {
   image: string;
 }
 
+const eureka = Eureka({ 
+  src: '../../public/fonts/Euskadi-Regular.otf',
+  variable: '--font-eureka'
+});
+
+const handron = Handron({ 
+  src: '../../public/fonts/Handron-Solid.otf',
+  variable: '--font-handron'
+});
+
 export default function CardAward({ title, description, narasumber, image }: AwardProps) {
     return (
         <div className="flex flex-col items-center w-full mb-16">
         {/* Container Kartu Utama */}
-        <div className="relative w-full max-w-4xl p-6 md:p-10 rounded-[40px] border-[3px] border-[#6B4490] bg-gradient-to-br from-[#825AC3] to-[#6B4490] shadow-2xl overflow-hidden">
+        <div className="relative w-full max-w-4xl p-6 md:p-10 rounded-[40px] border-[4px] border-[#340F5C] bg-gradient-to-br from-[#825AC3] to-[#340F5C] shadow-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
             
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative z-10">
             
@@ -42,11 +55,11 @@ export default function CardAward({ title, description, narasumber, image }: Awa
             </div>
 
             {/* Sisi Kanan: Konten Teks */}
-            <div className="flex flex-col text-center md:text-left text-[#FFD88C] flex-1">
-                <h2 className="text-2xl md:text-3xl font-black mb-6 tracking-wider uppercase drop-shadow-md">
+            <div className="flex flex-col text-center md:text-left  flex-1">
+                <h2 className={`text-2xl md:text-3xl font-black mb-6 text-[#FFD88C] tracking-wider uppercase drop-shadow-md ${eureka.className}`}>
                 {title}
                 </h2>
-                <p className={`text-sm md:text-base leading-relaxed opacity-90 ${roboto.className}`}>
+                <p className={`text-m text-[#FFFFFF] font-bold md:text-base leading-relaxed opacity-90 ${roboto.className}`}>
                 {description}
                 </p>
             </div>
