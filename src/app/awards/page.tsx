@@ -13,19 +13,19 @@ import CardAward from "@/components/cardawards";
 import { AwardsData } from "@/data/awards";
 
 const handron = Handron({ 
-  src: '../../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
+    src: '../../../public/fonts/Handron-Solid.otf',
+    variable: '--font-handron'
 });
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
+    subsets: ['latin'],
+    weight: ['400', '700'],
+    variable: '--font-roboto',
 });
 
 const eureka = Eureka({ 
-  src: '../../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
+    src: '../../../public/fonts/Euskadi-Regular.otf',
+    variable: '--font-eureka'
 });
 
 export default function awardsPage (){
