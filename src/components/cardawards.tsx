@@ -31,7 +31,7 @@ export default function CardAward({ title, description, narasumber, image }: Awa
     return (
         <div className="flex flex-col items-center w-full mb-16">
         {/* Container Kartu Utama */}
-        <div className="relative w-full max-w-4xl p-6 md:p-10 rounded-[40px] border-[4px] border-[#340F5C] bg-[#340F5C] z-10  mx-auto  h-auto justify-center  mt-10 bg-linear-to-b from-[#471F72] to-[#6F20C2] shadow-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
+        <div className="relative w-full max-w-4xl p-6 md:p-10 rounded-[40px] border-[4px] border-[#340F5C] bg-[#340F5C] z-10  mx-auto  h-auto justify-center  mt-10  shadow-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
             
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative z-10">
             
@@ -56,7 +56,7 @@ export default function CardAward({ title, description, narasumber, image }: Awa
 
             {/* Sisi Kanan: Konten Teks */}
             <div className="flex flex-col text-center md:text-left  flex-1">
-                <h2 className={`text-2xl md:text-3xl font-black mb-6 text-[#FFD88C] tracking-wider uppercase drop-shadow-md ${eureka.className}`}>
+                <h2 className={`text-2xl md:text-3xl  mb-6 text-[#FFD88C] tracking-wider uppercase drop-shadow-md ${eureka.className}`}>
                 {title}
                 </h2>
                 <p className={`text-m text-[#FFFFFF] font-bold md:text-base leading-relaxed opacity-90 ${roboto.className}`}>
