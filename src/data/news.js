@@ -5,7 +5,7 @@ export const ProjectData = [
 
         id: 1,
         title: "Radit Porto",
-        description: "A personal portfolio website showcasing my projects and skills.",
+        description: "A personal portfolio website showcasing my projects and skills. Lorem ipsum doloebsite showcasing my projects and skills.ebsite showcasing my projects and skills. ",
         imageUrl: "/images/radit-porto.png",
         projectUrl: "https://radit-porto.example.com",
         technologies: ["React", "Next.js", "CSS", "JavaScript"],

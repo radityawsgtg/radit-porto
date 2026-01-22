@@ -157,20 +157,20 @@ export default function Home() {
 
       {/* 5. TOOLS SECTION */}
       <section className="relative z-20 py-24 px-4 max-w-6xl mx-auto">
-        <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-12 text-[#FFD88C] ${handron.className}`}>Tools and Technologies</h2>
-        <div className="rounded-[40px] bg-gradient-to-b from-[#58199c] to-[#340F5C] border-4 border-[#58199c]/30 p-8 md:p-12 shadow-2xl flex flex-col gap-10">
+        <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-12 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
+        <div className="rounded-[40px] bg-[#340F5C] border-4 border-[#58199c]/30 p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
           {[
             { title: "Frontend", data: WebsiteToolsData },
             { title: "Backend", data: BackendToolsData },
             { title: "Database", data: DatabaseToolsData }
           ].map((cat, idx) => (
             <div key={idx} className="space-y-4">
-              <h3 className={`text-2xl md:text-3xl font-bold text-[#FFD88C] ${eureka.className}`}>{cat.title}</h3>
+              <h3 className={`text-2xl md:text-3xl font-bold text-[#FFD88C] ${roboto.className}`}>{cat.title}</h3>
               <div className="flex flex-wrap gap-3 p-4 bg-white/5 rounded-3xl">
                 {cat.data.map((tool, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-[#FFD88C] px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform cursor-default">
+                  <div key={i} className="flex items-center gap-2 bg-[#441379] px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform cursor-default ">
                     <img src={tool.imageUrl} alt={tool.name} className="w-5 h-5 object-contain"/>
-                    <span className={`text-sm md:text-base font-bold text-[#590844] ${roboto.className}`}>{tool.name}</span>
+                    <span className={`text-sm md:text-base font-bold text-[#ffffff] ${roboto.className}`}>{tool.name}</span>
                   </div>
                 ))}
               </div>
