@@ -97,13 +97,47 @@ export default function Home() {
       {/* 3. ABOUT SECTION: Sekarang berada di bawah area gambar langit (area ungu gelap) */}
       <section className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-20 md:-mt-32">
         {/* Frame Foto seperti di gambar (Polygon/Hexagon) */}
-        <div className="relative w-[280px] md:w-[450px] aspect-square group">
-          <div className="" />
-          
-            <div className="relative w-full max-w-[300px] md:w-[524px] aspect-[3/4] md:h-[710px]">
-              <Image src="/Vector 1.png" alt="Profile Vector" fill className="object-contain" priority />
-            </div>
+        <div className="relative w-full max-w-[300px] md:w-[524px] aspect-[3/4] md:h-[710px]">
+          {/* WRAPPER UTAMA: 
+            Gunakan clip-path yang sesuai dengan bentuk Vector 1 kamu 
+            agar cahaya tidak bocor ke area transparan.
+          */}
+          <div 
+            className="relative w-full h-full overflow-hidden"
+            style={{ 
+              clipPath: "polygon(25% -30%, 100% 0%, 75% 100%, 5% 60%)" 
+            }}
+          >
+            {/* 1. GAMBAR VECTOR KAMU */}
+            <Image 
+              src="/Vector 1.png" 
+              alt="Profile Vector" 
+              fill 
+              className="object-contain" 
+              priority 
+            />
+
+            {/* 2. EFEK KILATAN (MASKING OTOMATIS OLEH PARENT) */}
+            <motion.div
+              className="absolute inset-0 z-10"
+              style={{
+                // Cahaya putih transparan yang miring (Crystal Shine)
+                background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)",
+                width: "50%",
+                skewX: "-20deg", 
+              }}
+              animate={{ 
+                x: ["-100%", "300%"] 
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 1.5,
+                ease: "linear",
+              }}
+            />
           </div>
+        </div>
         
 
         <div className="relative max-w-xl text-[#FFD88C] text-center md:text-left">
@@ -156,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* 5. TOOLS SECTION */}
-      <section className="relative z-20 py-24 px-4 max-w-6xl mx-auto">
+      <section className="relative z-20 py-24 px-4 max-w-6xl mx-auto ">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-12 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
         <div className="rounded-[40px] bg-[#340F5C] border-4 border-[#58199c]/30 p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
           {[
