@@ -17,22 +17,26 @@ const eureka = Eureka({ src: '../../public/fonts/Euskadi-Regular.otf', variable:
 // --- Reusable WavyText Component ---
 const WavyText = ({ text, className, delayOffset = 0 }: { text: string, className: string, delayOffset?: number }) => {
   const letters = text.split("");
-  const container = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.05, delayChildren: delayOffset } },
-  };
-  const child = (i: number) => ({
-    visible: {
-      y: [0, -15, 0],
-      transition: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: i * 0.1 },
-    },
-    hidden: { y: 0 },
-  });
 
   return (
-    <motion.span variants={container} initial="hidden" animate="visible" className={`flex flex-wrap justify-center ${className}`}>
+    <motion.span 
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 0.5, delay: delayOffset }}
+      className={`flex flex-wrap justify-center ${className}`}
+    >
       {letters.map((char, index) => (
-        <motion.span key={index} variants={child(index)} style={{ display: "inline-block" }}>
+        <motion.span 
+          key={index} 
+          animate={{ y: [0, -15, 0] }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut", 
+            delay: delayOffset + index * 0.1 
+          }}
+          style={{ display: "inline-block" }}
+        >
           {char === " " ? "\u00A0" : char}
         </motion.span>
       ))}
@@ -62,26 +66,46 @@ export default function Home() {
   return (
     <main className={`relative min-h-screen w-full overflow-x-hidden bg-[#17052A] ${roboto.variable}`}>
       <Navbar />
-      
-      {/* 1. LAYER BACKGROUND */}
-      <div className=" inset-0 z-0 relative h-full w-full">
-        <Image src="/bg.png" alt="Background" fill className="object-cover opacity-100" priority />
-      </div>
+          
+          {/* WRAPPER HERO: Ini adalah area gambar langitmu */}
+      <section className="relative w-full h-[800px] md:h-[180vh] flex flex-col items-center">
+        
+        {/* 1. BACKGROUND IMAGE: Tanpa Zoom (Full Width) */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/bg.png" 
+            alt="Background" 
+            fill 
+            // object-cover memastikan lebar penuh, object-top memastikan gambar menempel ke atas
+            className="object-cover object-top" 
+            priority 
+          />
+          {/* Overlay gradasi agar bagian bawah gambar menyatu halus dengan warna bg body */}
+          
+        </div>
 
-      {/* 2. HERO SECTION */}
-      <section className="relative z-10 flex flex-col items-center justify-center min-h-screen text-[#FFD88C] [text-shadow:0_4px_8px_#1E368F70] px-4">
-        <WavyText text="Welcome To!" className={`text-[40px] md:text-[64px] font-bold ${eureka.className}`} />
-        <div className="mt-4 flex flex-col items-center">
-          <WavyText text="Raditya Work" delayOffset={0.5} className={`text-[50px] md:text-[96px] ${handron.className} text-center leading-tight`} />
-          <WavyText text="Place!" delayOffset={1.0} className={`text-[50px] md:text-[96px] ${handron.className} text-center leading-tight`} />
+        {/* 2. TEKS HERO: Diletakkan di area atas agar pas di posisi langit */}
+        <div className="relative z-10 flex flex-col items-center pt-32 md:pt-48 text-[#FFD88C] [text-shadow:0_4px_8px_#1E368F70] px-4">
+          <WavyText text="Welcome To!" className={`text-[32px] md:text-[64px] font-bold ${eureka.className}`} />
+          <div className="mt-2 flex flex-col items-center">
+            <WavyText text="RADITYA WORK" delayOffset={0.5} className={`text-[48px] md:text-[96px] ${handron.className} text-center leading-tight`} />
+            <WavyText text="PLACE!" delayOffset={1.0} className={`text-[48px] md:text-[96px] ${handron.className} text-center leading-tight`} />
+          </div>
         </div>
       </section>
 
-      {/* 3. ABOUT SECTION */}
-      <section className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto">
-        <div className="relative w-full max-w-[300px] md:w-[524px] aspect-[3/4] md:h-[710px]">
-          <Image src="/Vector 1.png" alt="Profile Vector" fill className="object-contain" priority />
-        </div>
+      {/* 3. ABOUT SECTION: Sekarang berada di bawah area gambar langit (area ungu gelap) */}
+      <section className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-20 md:-mt-32">
+        {/* Frame Foto seperti di gambar (Polygon/Hexagon) */}
+        <div className="relative w-[280px] md:w-[450px] aspect-square group">
+          <div className="" />
+          
+            <div className="relative w-full max-w-[300px] md:w-[524px] aspect-[3/4] md:h-[710px]">
+              <Image src="/Vector 1.png" alt="Profile Vector" fill className="object-contain" priority />
+            </div>
+          </div>
+        
+
         <div className="relative max-w-xl text-[#FFD88C] text-center md:text-left">
           <h2 className={`text-[36px] md:text-[54px] font-bold ${handron.className} [text-shadow:0_3px_19px_#FFD88C50]`}>
             <Typewriter
@@ -89,16 +113,14 @@ export default function Home() {
                 strings: ['HI PAL!', 'WELCOME TO MY WEB!', 'I Love music'],
                 autoStart: true, loop: true, delay: 75,
                 wrapperClassName: "inline-block",
-                cursorClassName: "text-[#FFD88C] animate-pulse"
               }}
             />
           </h2>
-          <p className="mt-6 leading-relaxed text-sm md:text-lg opacity-90">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt finibus risus in ullamcorper. Aliquam erat volutpat. Proin vitae nunc a nibh ullamcorper tempus.
+          <p className="mt-6 leading-relaxed text-sm md:text-lg opacity-90 text-justify md:text-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt finibus risus in ullamcorper. Aliquam erat volutpat. Proin vitae nunc a nibh ullamcorper tempus. Praesent a iaculis felis, sed efficitur ipsum.
           </p>
         </div>
       </section>
-
       {/* 4. PROJECT SECTION */}
       <section className="relative z-10 py-20">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-16 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
