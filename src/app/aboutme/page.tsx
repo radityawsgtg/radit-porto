@@ -30,7 +30,8 @@ export default function AboutMe() {
   ];
 
   const education = [
-    { date: "19 Mei 2025", title: "University Name", desc: "Bachelor of Computer Science", logo: "/school-logo.png" },
+    { date: "Now", title: "Institut Teknologi Bandung", desc: "Sekolah Teknik Elektro dan Informatika - Komputasi", logo: "/ITB.png" },
+    { date: "Now", title: "SMA Negeri 1 Yogyakarta", desc: "Matematics Sience", logo: "/TLD.png" },
   ];
 
   return (
