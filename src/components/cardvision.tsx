@@ -18,9 +18,9 @@ const roboto = Roboto({
 });
 
 const visiData = [
-    {id:1, title: "VISION 01", description: "Visi yang pertama untuk masa depan teknologi."},
-    {id:2, title: "VISION 02", description: "Visi yang kedua mengenai kolaborasi global."},
-    {id:3, title: "VISION 03", description: "Visi yang ketiga tentang inovasi tanpa batas."},
+    {id:1, title: "Inovation", description: "Visi yang pertama untuk masa depan teknologi."},
+    {id:2, title: "Impact", description: "Visi yang kedua mengenai kolaborasi global."},
+    {id:3, title: "Growth", description: "Visi yang ketiga tentang inovasi tanpa batas."},
 ];
 
 export default function Cardvision() {

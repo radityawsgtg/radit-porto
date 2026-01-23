@@ -91,9 +91,7 @@ export default function VisionPage() {
 
             <div className=" flex relative flex-col items-center">
                 <div className="gap-4 w-full mt-8 ">
-                    <h3 className="text-[#FFD88C] text-center mx-auto max-w-150 mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et soluta praesentium non eligendi error, esse quis dolorem fuga neque. 
-                    Beatae numquam aliquam possimus illum molestiae officia animi consectetur doloremque voluptates
-                    quibusdam magni eaque in velit assumenda quam ex, sapiente obcaecati?</h3>
+                    <h3 className="text-[#FFD88C] text-center mx-auto max-w-150 mb-6">Since childhood, my curiosity for technology has shaped who I am. From learning to unlock computers to engaging in student leadership and competitions, I’ve discovered that tech is not just about innovation, but about people. My passion lies in creating solutions at the intersection of artificial intelligence, education, and character building. Every challenge is an opportunity to learn, grow, and inspire others.</h3>
             
                     <div className="w-fit mx-auto h-auto bg-amber p-2 rounded-lg border-2 bg-[#A288D1]  border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
                     <Image src="/medium.svg" alt="Next" width={100} height={100} />
