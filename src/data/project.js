@@ -28,13 +28,7 @@ export const ProjectWeb = [
         projectUrl: "https://blog.example.com", 
         description: "A personal blog website showcasing thoughts and experiences.",
         technologies: ["React", "Node.js", "MongoDB", "Express"]},
-    {
-        id: 5, 
-        name: "Offshore Wind Turbine Semi-Submersible Platform", 
-        imageUrl: "/images/task-management-app.png", 
-        projectUrl: "https://taskmanager.example.com", 
-        description: "A productivity application for managing tasks and deadlines.",
-        technologies: ["React", "Node.js", "MongoDB", "Express"]},
+    
     
 ];
 
@@ -86,32 +80,5 @@ export const GameDev = [
         projectUrl: "https://toll-gate-guard.example.com", 
         description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
         technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
-    {
-        id: 2,
-        name: "Mystic Quest Adventure",
-        imageUrl: "/images/mystic-quest.png",
-        projectUrl: "https://mystic-quest.example.com",
-        description: "An open-world RPG featuring magical exploration, character customization, and epic quests in a fantasy realm.",
-        technologies: ["Unreal Engine", "C++", "Maya", "Substance Painter", "Wwise"]},
-    {
-        id: 3,
-        name: "Puzzle Master 3D",
-        imageUrl: "/images/puzzle-master.png",
-        projectUrl: "https://puzzle-master.example.com",
-        description: "A challenging 3D puzzle game that tests spatial reasoning and logical thinking with innovative mechanics.",
-        technologies: ["Unity", "C#", "Blender", "Houdini", "Audacity"]},
-    {
-        id: 4,
-        name: "Racing Thunder",
-        imageUrl: "/images/racing-thunder.png",
-        projectUrl: "https://racing-thunder.example.com",
-        description: "High-speed racing game with customizable vehicles, dynamic weather systems, and multiplayer competitions.",
-        technologies: ["Unreal Engine", "Blueprints", "3ds Max", "SpeedTree", "Miles Sound System"]},
-    {
-        id: 5,
-        name: "Space Colony Simulator",
-        imageUrl: "/images/space-colony.png",
-        projectUrl: "https://space-colony.example.com",
-        description: "A simulation game where players manage and expand a space colony, balancing resources, research, and crew morale.",
-        technologies: ["Unity", "C#", "Blender", "Substance Designer", "REAPER"]}
+    
 ];

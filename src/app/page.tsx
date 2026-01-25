@@ -144,7 +144,7 @@ export default function Home() {
           <h2 className={`text-[36px] md:text-[54px] font-bold ${handron.className} [text-shadow:0_3px_19px_#FFD88C50]`}>
             <Typewriter
               options={{
-                strings: ['HI PAL!', 'WELCOME TO MY WEB!', 'I Love music'],
+                strings: ['HI PAL!', 'WELCOME TO MY WEB!', 'I Love music', 'Web Developer'],
                 autoStart: true, loop: true, delay: 75,
                 wrapperClassName: "inline-block",
               }}
@@ -177,7 +177,7 @@ export default function Home() {
                 className="w-full max-w-[350px] rounded-[32px] bg-[#FFC76E] shadow-2xl border-[#FF9955] border-4 p-6 flex flex-col items-center"
               >
                 <div className="relative w-full aspect-video mb-6">
-                  <Image src="/Rectangle 5873.png" alt={project.title} fill className="object-contain" />
+                  <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
                 </div>
                 <div className="bg-gradient-to-t from-[#FFB366] to-[#FFD88C] rounded-full py-2 px-6 border-2 border-[#FFB366] w-full mb-4">
                   <h3 className={`text-lg md:text-xl font-bold text-[#87095A] text-center truncate ${handron.className}`}>{project.title}</h3>

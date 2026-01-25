@@ -82,7 +82,7 @@ export default function ProjectCard() {
                                 </div>
                                 <div className="flex gap-4 w-full mt-8">
                                     <div className="w-auto h-auto bg-amber p-2 rounded-lg border-2 backdrop-blur-md  border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
-                                        <Image src="/unity.png" alt="Unity" width={30} height={30} />
+                                        <Image src="/python.png" alt="Unity" width={30} height={30} />
                                     </div>
                                 </div>
                             </div>
@@ -112,6 +112,9 @@ export default function ProjectCard() {
                                 <div className="flex gap-4 w-full mt-8">
                                     <div className="w-auto h-auto bg-amber p-2 rounded-lg border-2 backdrop-blur-md  border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
                                         <Image src="/python.png" alt="Python" width={30} height={30} />
+                                    </div>
+                                    <div className="w-auto h-auto bg-amber p-2 rounded-lg border-2 backdrop-blur-md  border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
+                                        <Image src="/mp.jpg" alt="Mediapipe" width={30} height={30} />
                                     </div>
                                 </div>
                             </div>
