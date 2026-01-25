@@ -27,6 +27,7 @@ export default function AboutMe() {
   const workExperience = [
     { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Working as a team of bla", logo: "/company-logo.png" },
     { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Working as a team of bla", logo: "/company-logo.png" },
+     { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Working as a team of bla", logo: "/company-logo.png" },
   ];
 
   const education = [
