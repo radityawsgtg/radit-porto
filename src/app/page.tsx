@@ -106,19 +106,21 @@ export default function Home() {
       </section>
 
       {/* 3. ABOUT SECTION: Sekarang berada di bawah area gambar langit (area ungu gelap) */}
-      <section className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-20 md:-mt-32">
+      <motion.section 
+        className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-20 md:-mt-32"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         {/* Frame Foto seperti di gambar (Polygon/Hexagon) */}
         <div className="relative w-full max-w-[300px] md:w-[524px] aspect-[3/4] md:h-[710px]">
           {/* WRAPPER UTAMA: 
             Gunakan clip-path yang sesuai dengan bentuk Vector 1 kamu 
             agar cahaya tidak bocor ke area transparan.
           */}
-          <div 
-            className="relative w-full h-full overflow-hidden"
-            style={{ 
-              clipPath: "polygon(25% -30%, 100% 0%, 75% 100%, 5% 60%)" 
-            }}
-          >
+          
+   
             {/* 1. GAMBAR VECTOR KAMU */}
             <Image 
               src="/Vector 1.png" 
@@ -128,26 +130,7 @@ export default function Home() {
               priority 
             />
 
-            {/* 2. EFEK KILATAN (MASKING OTOMATIS OLEH PARENT) */}
-            <motion.div
-              className="absolute inset-0 z-10"
-              style={{
-                // Cahaya putih transparan yang miring (Crystal Shine)
-                background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)",
-                width: "50%",
-                skewX: "-20deg", 
-              }}
-              animate={{ 
-                x: ["-100%", "300%"] 
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                repeatDelay: 1.5,
-                ease: "linear",
-              }}
-            />
-          </div>
+          
         </div>
         
 
@@ -169,7 +152,7 @@ export default function Home() {
             My life motto is simple: to stumble, to stumble again, and to be shaped. From this principle, my vision was born—to create educational technology that focuses not only on intelligence, but also on values, ethics, and digital responsibility. One day, I dream of contributing to the advancement of education in Indonesia.
           </p>
         </div>
-      </section>
+      </motion.section>
       {/* 4. PROJECT SECTION */}
       <section className="relative z-10 py-20">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-16 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Where Passion Meets Progres</h2>
