@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
 import CardPhoto from "@/components/cardphoto";
+import { motion } from "framer-motion";
 
 
 
@@ -37,7 +38,12 @@ export default function ProjectPage() {
     return (
         <main className="relative min-h-screen w-full pt-20">
             <Navbar />
-            <h2 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
+            <motion.h2 
+                className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >PROJECTS</motion.h2>
 
             {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
             <div className="absolute inset-0 z-0 bg-[#17052A]">
@@ -49,7 +55,13 @@ export default function ProjectPage() {
                 />
             </div>
             {/* Konten halaman project dapat ditambahkan di sini */}
-            <div className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_span]:text-white [&_text]:fill-white p-8 bg-[#FFFFFF10] border-2 backdrop-blur-md border border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300">
+            <motion.div 
+                className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_span]:text-white [&_text]:fill-white p-8 bg-[#FFFFFF10] border-2 backdrop-blur-md border border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
                 <GitHubCalendar
                     username="radityawsgtg"
                     blockSize={15}
@@ -66,15 +78,26 @@ export default function ProjectPage() {
                 />
                 <h3 className={`text-[#BB83FF] text-center mt-4 ${eureka.className}`}>As a developer, GitHub plays a vital role in showcasing my projects and tracking my growth. Each green square represents a day of coding, contributing to open-source projects, and continuously learning in the field of software development.</h3>
 
-            </div>
-            <ProjectCard />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+            >
+                <ProjectCard />
+            </motion.div>
             
-            <img
+            <motion.img
                 src="/btm.png"
                 alt="Bottom Decor"
                 width={1920}
                 height={200}
                 className="bottom-0 left-0 w-full h-auto z-20 relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true }}
             />
 
             

@@ -146,10 +146,6 @@ export default function Home() {
           </h2>
           <p className="mt-6 leading-relaxed text-sm md:text-lg opacity-90 text-justify md:text-left">
             I believe that choosing to always feel “not smart enough” and maintaining a constant desire to learn from every experience is the beginning of wisdom.
-
-            My name is Raditya Wibian Sastaka, an Informatics student at STEI-K ITB. My interest in technology began at a young age and matured as I realized that technology is a double-edged sword—capable of building or destroying, depending on the character of those who use it.
-
-            My life motto is simple: to stumble, to stumble again, and to be shaped. From this principle, my vision was born—to create educational technology that focuses not only on intelligence, but also on values, ethics, and digital responsibility. One day, I dream of contributing to the advancement of education in Indonesia.
           </p>
         </div>
       </motion.section>
