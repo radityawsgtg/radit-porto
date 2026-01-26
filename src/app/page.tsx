@@ -7,7 +7,7 @@ import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData } fr
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Typewriter from "typewriter-effect";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 // --- Font Configurations ---
 const handron = Handron({ src: '../../public/fonts/Handron-Solid.otf', variable: '--font-handron' });
@@ -47,6 +47,7 @@ const WavyText = ({ text, className, delayOffset = 0 }: { text: string, classNam
 export default function Home() {
   const [currentPage, setcurrentPage] = useState(0);
   const [itemsToDisplay, setItemsToDisplay] = useState(3);
+  const [direction, setDirection] = useState(0);
 
   // Menangani perubahan jumlah item project secara responsive
   useEffect(() => {
@@ -60,8 +61,18 @@ export default function Home() {
 
   const displayedProjects = ProjectData.slice(currentPage, currentPage + itemsToDisplay);
 
-  const NextPage = () => { if (currentPage + itemsToDisplay < ProjectData.length) setcurrentPage(currentPage + 1); };
-  const PrevPage = () => { if (currentPage > 0) setcurrentPage(currentPage - 1); };
+  const NextPage = () => { 
+    if (currentPage + itemsToDisplay < ProjectData.length) {
+      setDirection(1);
+      setcurrentPage(currentPage + 1); 
+    }
+  };
+  const PrevPage = () => { 
+    if (currentPage > 0) {
+      setDirection(-1);
+      setcurrentPage(currentPage - 1); 
+    }
+  };
 
   return (
     <main className={`relative min-h-screen w-full overflow-x-hidden bg-[#17052A] ${roboto.variable}`}>
@@ -169,22 +180,35 @@ export default function Home() {
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500">
-            {displayedProjects.map((project, index) => (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }}
-                key={index} 
-                className="w-full max-w-[350px] rounded-[32px] bg-[#FFC76E] shadow-2xl border-[#FF9955] border-4 p-6 flex flex-col items-center"
-              >
-                <div className="relative w-full aspect-video mb-6">
-                  <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
-                </div>
-                <div className="bg-gradient-to-t from-[#FFB366] to-[#FFD88C] rounded-full py-2 px-6 border-2 border-[#FFB366] w-full mb-4">
-                  <h3 className={`text-lg md:text-xl font-bold text-[#87095A] text-center truncate ${handron.className}`}>{project.title}</h3>
-                </div>
-                <p className={`text-sm md:text-base text-[#590844] text-center  font-medium ${roboto.className}`}>{project.description}</p>
-              </motion.div>
-            ))}
+            <AnimatePresence custom={direction} mode="popLayout">
+              {displayedProjects.map((project, index) => (
+                <motion.div 
+                  key={`${currentPage}-${index}`}
+                  custom={direction}
+                  initial={{ opacity: 0, x: direction * 50 }}
+                  animate={{ 
+                    opacity: 1, 
+                    x: 0,
+                    transition: {
+                      delay: index * 0.1,
+                      type: "spring",
+                      visualDuration: 0.3,
+                      bounce: 0.4,
+                    }
+                  }}
+                  exit={{ opacity: 0, x: direction * -50 }}
+                  className="w-full max-w-[350px] rounded-[32px] bg-[#FFC76E] shadow-2xl border-[#FF9955] border-4 p-6 flex flex-col items-center"
+                >
+                  <div className="relative w-full aspect-video mb-6">
+                    <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
+                  </div>
+                  <div className="bg-gradient-to-t from-[#FFB366] to-[#FFD88C] rounded-full py-2 px-6 border-2 border-[#FFB366] w-full mb-4">
+                    <h3 className={`text-lg md:text-xl font-bold text-[#87095A] text-center truncate ${handron.className}`}>{project.title}</h3>
+                  </div>
+                  <p className={`text-sm md:text-base text-[#590844] text-center  font-medium ${roboto.className}`}>{project.description}</p>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
 
           <button onClick={NextPage} disabled={currentPage + itemsToDisplay >= ProjectData.length} className="bg-[#FFB142] p-3 md:p-4 rounded-full shadow-xl disabled:opacity-30 transition-transform active:scale-90 z-30">
