@@ -161,7 +161,7 @@ export default function Home() {
       </section>
       {/* 4. PROJECT SECTION */}
       <section className="relative z-10 py-20">
-        <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-16 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>PROJECTS</h2>
+        <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-16 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Where Passion Meets Progres</h2>
         
         <div className="flex items-center justify-center gap-4 md:gap-8 px-4 max-w-7xl mx-auto">
           <button onClick={PrevPage} disabled={currentPage === 0} className="bg-[#FFB142] p-3 md:p-4 rounded-full shadow-xl disabled:opacity-30 transition-transform active:scale-90 z-30">
@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="bg-gradient-to-t from-[#FFB366] to-[#FFD88C] rounded-full py-2 px-6 border-2 border-[#FFB366] w-full mb-4">
                   <h3 className={`text-lg md:text-xl font-bold text-[#87095A] text-center truncate ${handron.className}`}>{project.title}</h3>
                 </div>
-                <p className={`text-sm md:text-base text-[#590844] text-center font-medium ${roboto.className}`}>{project.description}</p>
+                <p className={`text-sm md:text-base text-[#590844] text-center  font-medium ${roboto.className}`}>{project.description}</p>
               </motion.div>
             ))}
           </div>
