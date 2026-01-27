@@ -59,7 +59,7 @@ export default function CardAward({ title, description, narasumber, image }: Awa
                 <h2 className={`text-2xl md:text-3xl  mb-6 text-[#FFD88C] tracking-wider uppercase drop-shadow-md ${eureka.className}`}>
                 {title}
                 </h2>
-                <p className={`text-m text-[#FFFFFF] font-bold md:text-base leading-relaxed opacity-90 ${roboto.className}`}>
+                <p className={`text-m text-[#FFFFFF]  md:text-base leading-relaxed opacity-90 ${roboto.className}`}>
                 {description}
                 </p>
             </div>
