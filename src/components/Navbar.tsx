@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className={`
       fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out
       ${scrolled 
-        ? 'top-4 w-[90%] md:w-[80%] max-w-5xl rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl p-3' 
+        ? 'top-4 w-[90%] md:w-[80%] max-w-5xl rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-sm shadow-2xl p-3' 
         : 'top-0 w-full p-4 md:p-5'
       }
     `}>
