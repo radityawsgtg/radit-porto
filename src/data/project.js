@@ -75,7 +75,15 @@ export const GameDev = [
 
     {
         id: 1, 
-        name: "Toll-Gate-Guard-Frontier-2025", 
+        name: "Toll Gate Guard-Frontier 2025", 
+        imageUrl: "/images/toll-gate-guard.png", 
+        projectUrl: "https://toll-gate-guard.example.com", 
+        description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
+        technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
+
+    {
+        id: 2, 
+        name: "Toll Gate Guard-Frontier 2025", 
         imageUrl: "/images/toll-gate-guard.png", 
         projectUrl: "https://toll-gate-guard.example.com", 
         description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
