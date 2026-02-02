@@ -41,34 +41,6 @@ export const MachineLearning = [
         projectUrl: "https://attention-analysis.example.com", 
         description: "A machine learning system that tracks head movements to analyze screen attention patterns and generates heatmap visualizations for user engagement studies.",
         technologies: ["Python", "OpenCV", "TensorFlow", "NumPy", "Matplotlib"]},
-    {
-        id: 2,
-        name: "Sentiment Analysis for Social Media Posts",
-        imageUrl: "/images/sentiment-analysis.png",
-        projectUrl: "https://sentiment-analysis.example.com",
-        description: "Natural language processing model that analyzes social media posts to determine sentiment and emotional tone using deep learning techniques.",
-        technologies: ["Python", "NLTK", "Scikit-learn", "BERT", "Pandas"]},
-    {
-        id: 3,
-        name: "Image Classification for Medical Diagnosis",
-        imageUrl: "/images/medical-classification.png",
-        projectUrl: "https://medical-classification.example.com",
-        description: "Convolutional neural network trained on medical imaging data to assist in preliminary diagnosis of various conditions.",
-        technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "Pillow"]},
-    {
-        id: 4,
-        name: "Predictive Maintenance for Industrial Equipment",
-        imageUrl: "/images/predictive-maintenance.png",
-        projectUrl: "https://predictive-maintenance.example.com",
-        description: "Time series analysis and machine learning model that predicts equipment failures before they occur, reducing downtime and maintenance costs.",
-        technologies: ["Python", "Scikit-learn", "Pandas", "Prophet", "SQL"]},
-    {
-        id: 5,
-        name: "Recommendation System for E-commerce",
-        imageUrl: "/images/recommendation-system.png",
-        projectUrl: "https://recommendation-system.example.com",
-        description: "Collaborative filtering and content-based recommendation engine that suggests products to users based on their browsing and purchase history.",
-        technologies: ["Python", "Surprise", "Pandas", "NumPy", "Flask"]}
 ];
 
 export const GameDev = [
@@ -80,23 +52,4 @@ export const GameDev = [
         projectUrl: "https://toll-gate-guard.example.com", 
         description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
         technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
-
-    {
-        id: 2, 
-        name: "Toll Gate 2025", 
-        imageUrl: "/images/toll-gate-guard.png", 
-        projectUrl: "https://toll-gate-guard.example.com", 
-        description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
-        technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
-
-        {
-        id: 3, 
-        name: "Toll Gate 2025", 
-        imageUrl: "/images/toll-gate-guard.png", 
-        projectUrl: "https://toll-gate-guard.example.com", 
-        description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
-        technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
-
-        
-    
 ];

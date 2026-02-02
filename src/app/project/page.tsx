@@ -54,6 +54,19 @@ export default function ProjectPage() {
                     className="object-cover"
                 />
             </div>
+            <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
+                <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+            </div>
+            <div className="absolute top-1/4  w-350 h-350 rotate-1 opacity-80">
+                <Image src="/PuzT1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+            </div>
+            <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
+                <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+            </div>
+            <div className="absolute bottom-30 w-350 h-350 rotate-1 opacity-80">
+                <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
+            </div>
+
             {/* Konten halaman project dapat ditambahkan di sini */}
             <motion.div 
                 className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_span]:text-white [&_text]:fill-white p-8 bg-[#FFFFFF10] border-2 backdrop-blur-md border border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300"
