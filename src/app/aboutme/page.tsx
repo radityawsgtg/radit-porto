@@ -41,6 +41,7 @@ export default function AboutMe() {
     <main className={`${eureka.variable} ${roboto.variable} relative min-h-screen w-full bg-[#17052A] pb-20`}>
         <Navbar />
 
+
         <div className="max-w-5xl mx-auto px-10 pt-20">
             <motion.h2
                 initial={{ opacity: 0, y: -30 }}
