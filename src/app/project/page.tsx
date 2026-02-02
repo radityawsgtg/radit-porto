@@ -48,10 +48,10 @@ export default function ProjectPage() {
             {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
             <div className="absolute inset-0 z-0 bg-[#17052A]">
                 <Image
-                    src="/bgproject.png"
+                    src="/"
                     alt="Project Background"
                     fill
-                    className="object-cover"
+                    className="object-center"
                 />
             </div>
             <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
