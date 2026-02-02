@@ -25,9 +25,11 @@ const eureka = Eureka({
 
 export default function AboutMe() { 
   const workExperience = [
-    { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Satu Teladan Frontend Develpoer", logo: "/company-logo.png" },
-    { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Working as a team of bla", logo: "/company-logo.png" },
-    { date: "19 Mei 2025", title: "Tools and Technologies", desc: "Working as a team of bla", logo: "/company-logo.png" },
+    
+    { date: "2025 - 2026", title: "Aku Masuk ITB 2026", desc: "Frontend Developer focused on building e-commerce platforms and landing pages that support AMI’s mission in promoting access to higher education.", logo: "/ami.png" },
+    { date: " 2025", title: " Wisokto ITB 2025", desc: "Backend developer for the graduation parade web application, facilitating event management and participant coordination.", logo: "/Wisok.png" },
+    { date: "2024 - 2025", title: "SaTe App", desc: "Frontend developer for a mobile app to connect alumni and current students of SMAN 1 Teladan Yogyakarta.", logo: "/TLD.png" },
+    { date: "2019 - 2020", title: "V-Tuber Graphic Designer", desc: "V-Tuber Graphic Designer specializing in livestream graphics for YouTube, designing visual assets for Eiko Yukashi and Suzumiya Aizu.", logo: "/kori.jpg" },
   ];
 
   const education = [
