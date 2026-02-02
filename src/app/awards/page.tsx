@@ -36,6 +36,19 @@ export default function awardsPage (){
     return(
             <main className=" relative min-h-screen w-full bg-[#17052A] ">
                 <Navbar />  
+
+                <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
+                    <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                </div>
+                <div className="absolute top-1/4  w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzT1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                </div>
+                <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                </div>
+                <div className="absolute bottom-30 w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
+                </div>
                 
                 <div className="relative z-10 pt-20">
                     <h2 className={`text-[48px] pt-15 font-bold text-center mb-5 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>AWARDS</h2>
@@ -53,12 +66,12 @@ export default function awardsPage (){
                                         ease: "easeOut",
                                     }}
                                     >
-                                    <CardAward 
-                                        title={award.title}
-                                        description={award.description}
-                                        narasumber={award.narasumber}
-                                        image={award.image}
-                                    />
+                                        <CardAward 
+                                            title={award.title}
+                                            description={award.description}
+                                            narasumber={award.narasumber}
+                                            image={award.image}
+                                        />
                                     </motion.div>
                                 ))}
                             </div>
