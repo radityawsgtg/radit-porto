@@ -72,12 +72,11 @@ export default function VisionPage() {
                 </div>
                 </div>
 
-                {/* GAMBAR GUNUNG (Sebagai Penutup Background) */}
-                {/* Margin top negatif (-mt-20 atau disesuaikan) membuat gunung "naik" menutupi batas akhir background */}
+            
                 <img
                 src="/Component 2.png"
                 alt="Bottom Decor"
-                className="w-full h-auto  translate-y-[50%] md:-translate-y-[40%] absolute z-40" 
+                className="w-full h-auto -translate-y-[60%] md:-translate-y-[40%] absolute z-40" 
                 />
             </section>
 

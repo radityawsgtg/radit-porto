@@ -43,7 +43,7 @@ export default function Cardvision() {
                     </div>
 
                     {/* Judul dengan Background Gradient */}
-                    <div className="rounded-full bg-[#FFD88C] flex bg-gradient-to-t from-[#FFB366] to-[#FFD88C] shadow-md mt-6 border-[#FFB366] border-4 text-[#87095A] w-full md:w-auto">
+                    <div className="rounded-full bg-[#FFD88C] flex justify-center items-center bg-gradient-to-t from-[#FFB366] to-[#FFD88C] shadow-md mt-6 border-[#FFB366] border-4 text-[#87095A] w-full md:w-auto">
                         <h2 className={`text-[24px] md:text-[30px] font-bold text-center py-2 px-6 md:px-10 truncate ${handron.className}`}>
                             {item.title}
                         </h2>

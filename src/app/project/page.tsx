@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 
 
 
+
 const handron = Handron({ 
   src: '../../../public/fonts/Handron-Solid.otf',
   variable: '--font-handron'
@@ -54,18 +55,19 @@ export default function ProjectPage() {
                     className="object-center"
                 />
             </div>
+
             <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
-                <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
-            </div>
-            <div className="absolute top-2/4  w-350 h-350 rotate-1 opacity-80">
-                <Image src="/PuzT1.png" alt="puzzle" width={300} height={300} className="object-contain" />
-            </div>
-            <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
-                <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
-            </div>
-            <div className="absolute bottom-10 w-350 h-350 rotate-1 opacity-80">
-                <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
-            </div>
+                    <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                </div>
+                <div className="absolute top-1/4  w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzT1.png" alt="puzzle" width={300} height={300} className="object-contain" />
+                </div>
+                <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                </div>
+                <div className="absolute -bottom-10 w-350 h-350 rotate-1 opacity-80">
+                    <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
+                </div>
 
             {/* Konten halaman project dapat ditambahkan di sini */}
             <motion.div 

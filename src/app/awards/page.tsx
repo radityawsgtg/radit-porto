@@ -34,7 +34,7 @@ export default function awardsPage (){
 
 
     return(
-            <main className=" relative min-h-screen w-full bg-[#17052A] ">
+            <main className=" relative min-h-screen w-full bg-[#17052A] overflow-hidden">
                 <Navbar />  
 
                 <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
@@ -46,7 +46,7 @@ export default function awardsPage (){
                 <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
                     <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
                 </div>
-                <div className="absolute bottom-10 w-350 h-350 rotate-1 opacity-80">
+                <div className="absolute -bottom-10 w-350 h-350 rotate-1 opacity-80">
                     <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
                 </div>
                 

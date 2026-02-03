@@ -95,13 +95,13 @@ export default function AboutMe() {
                         </div>
 
                         {/* Card */}
-                        <div className="flex items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
-                            <div className="mr-6 flex-shrink-0">
-                            <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
+                        <div className="flex flex-col md:flex-row items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
+                            <div className="mr-0 md:mr-6 mb-4 md:mb-0 flex-shrink-0">
+                            <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden mx-auto md:mx-0">
                                 <Image src={item.logo} alt="Logo" width={50} height={50} className="object-contain" />
                             </div>
                             </div>
-                            <div className="font-[family-name:var(--font-eureka)] text-[#17052A]">
+                            <div className="font-[family-name:var(--font-eureka)] text-[#17052A] text-center md:text-left">
                             <h3 className="text-2xl font-bold">{item.title}</h3>
                             <p className="text-lg opacity-80">{item.desc}</p>
                             </div>
@@ -141,13 +141,13 @@ export default function AboutMe() {
                         </div>
 
                         {/* Card */}
-                        <div className="flex items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
-                            <div className="mr-6 flex-shrink-0">
-                            <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
+                        <div className="flex flex-col md:flex-row items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
+                            <div className="mr-0 md:mr-6 mb-4 md:mb-0 flex-shrink-0">
+                            <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden mx-auto md:mx-0">
                                 <Image src={item.logo} alt="Logo" width={50} height={50} className="object-contain" />
                             </div>
                             </div>
-                            <div className="font-[family-name:var(--font-eureka)] text-[#17052A]">
+                            <div className="font-[family-name:var(--font-eureka)] text-[#17052A] text-center md:text-left">
                             <h3 className="text-2xl font-bold">{item.title}</h3>
                             <p className="text-lg opacity-80">{item.desc}</p>
                             </div>
