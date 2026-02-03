@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
         {/* LOGO */}
         <div className={`transition-all duration-500 ${scrolled ? 'w-10 md:w-12' : 'w-12 md:w-16'}`}>
-          <img src="/nextjs.png" alt="Logo" className="w-full h-auto" />
+          <img src="/logordait.png" alt="Logo" className="w-full h-auto" />
         </div>
 
         {/* MOBILE HAMBURGER */}
