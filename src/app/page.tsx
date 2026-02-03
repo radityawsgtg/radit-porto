@@ -3,7 +3,7 @@ import Image from "next/image";
 import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
-import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData } from '@/data/news.js';
+import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData, GraphicDesignToolsData } from '@/data/news.js';
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Typewriter from "typewriter-effect";
@@ -138,14 +138,14 @@ export default function Home() {
           <h2 className={`text-[36px] md:text-[54px] font-bold ${handron.className} [text-shadow:0_3px_19px_#FFD88C50]`}>
             <Typewriter
               options={{
-                strings: ['HI PAL!', 'WELCOME TO MY WEB!', 'I Love music', 'Web Developer'],
+                strings: [ 'WELCOME TO MY SITE!', 'Failure Enthusiast', 'Web Developer', 'Inteterst in AI & ML'],
                 autoStart: true, loop: true, delay: 75,
                 wrapperClassName: "inline-block",
               }}
             />
           </h2>
           <p className="mt-6 leading-relaxed text-sm md:text-lg opacity-90 text-justify md:text-left">
-            I believe that choosing to always feel “not smart enough” and maintaining a constant desire to learn from every experience is the beginning of wisdom.
+            I believe that choosing to always feel “not smart enough” and maintaining a constant desire to learn from every experience is the beginning of wisdom. Radit is a Frontend Developer specializing in TypeScript, React Native, and Next.js. He focuses on building scalable, high-performance applications with clean code and intuitive user experiences.
           </p>
         </div>
       </motion.section>
@@ -203,7 +203,7 @@ export default function Home() {
           {[
             { title: "Frontend", data: WebsiteToolsData },
             { title: "Backend", data: BackendToolsData },
-            { title: "Database", data: DatabaseToolsData }
+            { title: "Graphic Design", data: GraphicDesignToolsData }
           ].map((cat, idx) => (
             <div key={idx} className="space-y-4">
               <h3 className={`text-2xl md:text-3xl font-bold text-[#FFD88C] ${roboto.className}`}>{cat.title}</h3>
