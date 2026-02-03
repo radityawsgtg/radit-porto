@@ -10,7 +10,7 @@ export const ProjectWeb = [
     {
         id: 2, 
         name: "Aku Masuk ITB 2026 ", 
-        imageUrl: "/images/lepi.png", 
+        imageUrl: "/images/ami.png", 
         projectUrl: "https://akumasukitb.com/", 
         description: "eveloped two web platforms for AMI ITB 2026: an event information website and an e-commerce website. Built with Next.js and Tailwind CSS, focusing on responsive design, clean UI, and user-friendly experience.",
         technologies: ["React", "Node.js", "MongoDB", "Express"]},

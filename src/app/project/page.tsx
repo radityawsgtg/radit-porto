@@ -37,7 +37,7 @@ export default function ProjectPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full pt-20">
+        <main className="relative min-h-screen w-full pt-20 bg-[#17052A]">
             <Navbar />
             <motion.h2 
                 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
@@ -47,14 +47,7 @@ export default function ProjectPage() {
             >PROJECTS</motion.h2>
 
             {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
-            <div className="absolute inset-0 z-0 bg-[#17052A]">
-                <Image
-                    src="/"
-                    alt="Project Background"
-                    fill
-                    className="object-center"
-                />
-            </div>
+    
 
             <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
                     <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
