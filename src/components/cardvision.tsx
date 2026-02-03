@@ -18,9 +18,9 @@ const roboto = Roboto({
 });
 
 const visiData = [
-    {id:1, title: "Inovation", description: "Visi yang pertama untuk masa depan teknologi."},
-    {id:2, title: "Impact", description: "Visi yang kedua mengenai kolaborasi global."},
-    {id:3, title: "Growth", description: "Visi yang ketiga tentang inovasi tanpa batas."},
+    {id:1, title: "Terbentur", description: "I welcome the initial \"impact\" of complex problems. Every technical hurdle or societal challenge is a starting point that demands curiosity and action.",   src: "/Terb1.jpeg" },
+    {id:2, title: "Terbentur", description: "Character is built in the \"uncertainty\" Through the trial and error, I refine my skills and test my integrity, ensuring that the solutions I build are not just functional, but responsible.",src: "/Terb2.jpeg"  },
+    {id:3, title: "Terbentuk", description: "True impact is \"formed\" over time. By surviving the pressure of the process, I emerge as a developer ready to contribute to Indonesia’s 2045 vision creating technology that truly serves humanity.",src: "/Terb3.jpeg"  },
 ];
 
 export default function Cardvision() {
@@ -34,7 +34,7 @@ export default function Cardvision() {
                     {/* Container Gambar Responsif */}
                     <div className="relative w-full aspect-video md:w-[327px] md:h-[206px]">
                         <Image
-                            src="/Rectangle 5873.png"
+                            src={item.src}
                             alt="Vision Illustration"
                             fill
                             className="object-contain p-2"

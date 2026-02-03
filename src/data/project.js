@@ -4,7 +4,7 @@ export const ProjectWeb = [
         id: 1,
         name: "Radityawsgtg portofolio", 
         imageUrl: "/images/radit-porto.png", 
-        projectUrl: "https://radit-porto.example.com", 
+        projectUrl: "", 
         description: "A personal portfolio website where I present my work, technical skills, and journey as a frontend developer. Developed using Next.js and Tailwind CSS with an emphasis on clean design and smooth user experience.",
         technologies: ["React", "Next.js", "CSS", "JavaScript"]},
     {
@@ -37,8 +37,8 @@ export const MachineLearning = [
     {
         id: 1, 
         name: "Screen Attention Analysis Using Head Movement Tracking and Heatmap Visualization", 
-        imageUrl: "/images/attention-analysis.png", 
-        projectUrl: "https://attention-analysis.example.com", 
+        imageUrl: "/images/face_landmark.png", 
+        projectUrl: "https://github.com/radityawsgtg/Eye-Head-TrackerInterkom", 
         description: "A machine learning system that tracks head movements to analyze screen attention patterns and generates heatmap visualizations for user engagement studies.",
         technologies: ["Python", "OpenCV", "TensorFlow", "NumPy", "Matplotlib"]},
 ];
@@ -49,7 +49,7 @@ export const GameDev = [
         id: 1, 
         name: "Toll Gate Guard-Frontier 2025", 
         imageUrl: "/images/TGPV.png", 
-        projectUrl: "https://toll-gate-guard.example.com", 
+        projectUrl: "https://github.com/radityawsgtg/Toll-Gate-Guard-Frontier-2025", 
         description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
         technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
 ];

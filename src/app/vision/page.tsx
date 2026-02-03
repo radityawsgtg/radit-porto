@@ -49,7 +49,7 @@ export default function VisionPage() {
                 <div className="flex flex-row items-center justify-center p-5 gap-10 mx-auto max-w-4xl">
                     <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
                     <div className="w-full md:w-1/2 p-10">
-                        <img src="/Rectangle 5873.png" alt="Vision" className="w-full h-auto object-cover rounded-2xl" />
+                        <img src="/KATY.JPG" alt="Vision" className="w-full h-auto object-cover rounded-2xl" />
                     </div>
                     <div className="w-full md:w-1/2 p-10">
                         <p className={`text-[#6F0E4E] text-left text-lg font-medium ${roboto.className}`}>To harness technology as a bridge between knowledge, character, and impact. I believe that technology, when guided by values like empathy, responsibility, and integrity, can transform education, empower people, and contribute to Indonesia’s journey toward 2045.
