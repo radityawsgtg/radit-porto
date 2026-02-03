@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* 3. ABOUT SECTION: Sekarang berada di bawah area gambar langit (area ungu gelap) */}
       <motion.section 
-        className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-20 md:-mt-32"
+        className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-5 md:gap-10 px-6 md:px-20 py-20 max-w-7xl mx-auto -mt-100 md:-mt-32"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}

@@ -37,7 +37,7 @@ export default function ProjectPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full pt-20 bg-[#17052A]">
+        <main className="relative min-h-screen w-full bg-[#17052A] overflow-hidden">
             <Navbar />
             <motion.h2 
                 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
