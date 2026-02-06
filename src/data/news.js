@@ -54,14 +54,15 @@ export const ProjectData = [
 export const BackendToolsData = [
     {id: 1, name: "Node.js", imageUrl: "/nodejs-icon.png"},
     {id: 2, name: "Express", imageUrl: "/express-js-icon.png"},
-    {id: 3, name: "Supabase", imageUrl: "/supabase-icon.png"}
+    {id: 3, name: "Supabase", imageUrl: "/supabase-icon.png"},
+    {id: 4, name: "Prisma", imageUrl: "/icons/prism.svg"}
 ];
 
 export const GraphicDesignToolsData = [
     {id: 1, name: "Figma", imageUrl: "/icons/figma.png"},
     {id: 2, name: "After Effects", imageUrl: "/icons/Adobe_After_Effects_CC_icon.svg"},
     {id: 3, name: "Blender", imageUrl: "/icons/Blender_logo_no_text.svg"},
-    {id: 4, name: "Photoshop", imageUrl: "/icons/Photoshop_CC_icon.png"}
+    {id: 4, name: "Photosop", imageUrl: "/icons/Photoshop_CC_icon.png"}
 ];
 
 export const WebsiteToolsData = [
