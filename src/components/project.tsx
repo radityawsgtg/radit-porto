@@ -1,110 +1,77 @@
 "use client";
 import Image from "next/image";
 import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import { Poppins } from "next/font/google";
+import { ExternalLink } from "lucide-react";
 import { ProjectWeb, GameDev, MachineLearning } from "@/data/project.js";
 import Link from 'next/link';
 
 // Konfigurasi Font
-const handron = Handron({ 
+const handron = Handron({
   src: '../../public/fonts/Handron-Solid.otf',
   variable: '--font-handron'
 });
-const roboto = Roboto({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
+  weight: ['400', '500', '600'],
+  variable: '--font-poppins',
 });
-const eureka = Eureka({ 
-  src: '../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
-});
+
+const CATEGORIES = [
+  { label: "Web Development", data: ProjectWeb, icons: ["/next.svg", "/Tailwind.svg"] },
+  { label: "Game Development", data: GameDev, icons: ["/python.png"] },
+  { label: "Machine Learning", data: MachineLearning, icons: ["/python.png", "/mp.jpg"] },
+];
 
 export default function ProjectCard() {
-  // Gabungkan semua data project untuk memudahkan render, 
-  // atau kamu bisa tetap memisahnya jika urutannya harus spesifik.
-  const allProjects = [
-    { data: ProjectWeb, tagImg: "/webdev.png", icons: ["/next.svg", "/Tailwind.svg"] },
-    { data: GameDev, tagImg: "/gdev.png", icons: ["/python.png"] },
-    { data: MachineLearning, tagImg: "/ML.png", icons: ["/python.png", "/mp.jpg"] }
-  ];
-
   return (
-    <>
-      {allProjects.map((category) => 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto p-4 sm:p-8 md:p-12">
+      {CATEGORIES.map((category) =>
         category.data.map((project) => (
-          <div key={project.id} className="relative p-4 sm:p-8 md:p-15">
-            <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="block group">
-              <div className="rounded-2xl bg-[#340F5C] z-10 w-full mx-auto max-w-4xl h-auto justify-center relative mt-10 bg-linear-to-b from-[#6F20C2] to-[#471F72] shadow-lg gap-4 sm:gap-8 md:gap-10 p-1 group-hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] group-hover:bg-linear-to-b group-hover:from-[#b672ff] group-hover:to-[#e9d5ff] transition-all duration-300">
-                
-                <div className="p-6 sm:p-8 md:p-20 bg-[#340F5C] w-full h-full rounded-2xl flex flex-col md:flex-row gap-6 sm:gap-6 md:gap-8 relative">
-                  
-                  {/* Image Project */}
-                  <div className="w-full md:w-2/5 flex-shrink-0 flex justify-center items-center">
-                    <Image 
-                      src={project.imageUrl} 
-                      alt={project.name} 
-                      width={400} 
-                      height={400} 
-                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-[400px] md:h-[400px] object-contain" 
-                    />
+          <Link
+            key={project.id}
+            href={project.projectUrl || "#"}
+            target={project.projectUrl ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            className="group flex flex-col rounded-2xl bg-[#2A0F4D] border border-[#FFFFFF15] overflow-hidden shadow-lg hover:border-[#BB83FF] hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] transition-all duration-300"
+          >
+            {/* Gambar project */}
+            <div className="relative w-full aspect-video bg-[#1B0A33]">
+              <Image
+                src={project.imageUrl}
+                alt={project.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute top-3 left-3 rounded-full bg-[#17052A]/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-[#FFD88C] border border-[#FFFFFF20]">
+                {category.label}
+              </span>
+            </div>
+
+            {/* Konten teks */}
+            <div className="flex flex-col flex-1 p-5 sm:p-6 text-white">
+              <h3 className={`text-lg sm:text-xl text-[#fde0a3] mb-2 ${handron.className}`}>
+                {project.name}
+              </h3>
+              <p className={`text-sm text-white/80 leading-relaxed flex-1 ${poppins.className}`}>
+                {project.description}
+              </p>
+
+              <div className="flex items-center gap-2 mt-4 flex-wrap">
+                {category.icons.map((iconPath, index) => (
+                  <div key={index} className="p-1.5 rounded-lg bg-[#441379] border border-[#FFFFFF15]">
+                    <Image src={iconPath} alt="Tech icon" width={18} height={18} className="w-[18px] h-[18px] object-contain" />
                   </div>
-
-                  {/* Konten Teks */}
-                  <div className="w-full md:w-3/5 text-white text-left">
-                    <div className={`text-[#fde0a3] text-center md:text-left py-2 text-2xl sm:text-2xl block mb-3 sm:mb-4 ${eureka.className}`}>
-                      {project.name}
-                    </div>
-                    <p className={`text-sm sm:text-sm leading-relaxed text-center md:text-left ${roboto.className}`}>
-                      {project.description}
-                    </p>
-                    
-                    {/* Tag Atas (Web Dev/Game Dev/ML) */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-105 transition-all duration-300">
-                      <Image 
-                        className="drop-shadow-[0_0_5px_#FFD88C] w-60 h-[100px] sm:w-32 sm:h-[43px] md:w-[600px] md:h-[200px]" 
-                        src={category.tagImg} 
-                        alt="Category Tag" 
-                        width={600} 
-                        height={200} 
-                      />
-                    </div>
-
-                    {/* Button Lihat Project (Bawah) */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 p-2 group-hover:scale-105 transition-all duration-300">
-                      <Image 
-                        className="drop-shadow-[0_0_10px_#693a9c] w-80 h-[100px] sm:w-32 sm:h-[64px] md:w-[600px] md:h-[300px]" 
-                        src="/lihatp.png" 
-                        alt="View Project" 
-                        width={600} 
-                        height={300} 
-                      />
-                    </div>
-
-                    {/* Tech Stack Icons - SUDAH DIPERBESAR UNTUK MOBILE */}
-                    <div className="flex justify-center md:justify-start gap-4 w-full mt-8 sm:mt-8">
-                      {category.icons.map((iconPath, index) => (
-                        <div key={index} className="w-auto h-auto bg-amber p-2.5 sm:p-2 rounded-xl border-2 backdrop-blur-md border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300 hover:bg-amber-50">
-                          <Image 
-                            src={iconPath} 
-                            alt="Tech Icon" 
-                            width={32} 
-                            height={32} 
-                            className="w-8 h-8 sm:w-[30px] sm:h-[30px]" 
-                          />
-                        </div>
-                      ))}
-                    </div>
-
-                  </div>
-                </div>
+                ))}
+                <span className={`ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-[#BB83FF] group-hover:text-[#e9d5ff] transition-colors ${poppins.className}`}>
+                  Lihat Project <ExternalLink size={14} />
+                </span>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))
       )}
-    </>
+    </div>
   );
 }

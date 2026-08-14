@@ -8,7 +8,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
-import CardPhoto from "@/components/cardphoto";
 import { motion } from "framer-motion";
 
 
@@ -49,17 +48,17 @@ export default function ProjectPage() {
             {/* 1. LAYER BACKGROUND: Gambar memenuhi seluruh area main */}
     
 
-            <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
-                    <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+            <div className="absolute -top-8 -right-8 w-40 h-40 md:w-56 md:h-56 rotate-12 opacity-60">
+                    <Image src="/PuzA1.png" alt="" width={500} height={500} className="object-contain" />
                 </div>
-                <div className="absolute top-1/4  w-350 h-350 rotate-1 opacity-80">
-                    <Image src="/PuzT1.png" alt="puzzle" width={300} height={300} className="object-contain" />
+                <div className="absolute top-1/4 -left-10 w-40 h-40 md:w-56 md:h-56 rotate-1 opacity-60">
+                    <Image src="/PuzT1.png" alt="" width={300} height={300} className="object-contain" />
                 </div>
-                <div className="absolute top-1/4 left-3/4 w-350 h-350 rotate-1 opacity-80">
-                    <Image src="/PuzB1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                <div className="absolute top-1/4 right-0 w-40 h-40 md:w-56 md:h-56 rotate-1 opacity-60">
+                    <Image src="/PuzB1.png" alt="" width={500} height={500} className="object-contain" />
                 </div>
-                <div className="absolute -bottom-10 w-350 h-350 rotate-1 opacity-80">
-                    <Image src="/PuzB2.png" alt="puzzle" width={1000} height={1000} className="object-contain" />
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 md:w-56 md:h-56 rotate-1 opacity-60">
+                    <Image src="/PuzB2.png" alt="" width={1000} height={1000} className="object-contain" />
                 </div>
 
             {/* Konten halaman project dapat ditambahkan di sini */}
