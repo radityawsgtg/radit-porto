@@ -51,7 +51,7 @@ export default function ProjectCard() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute top-3 left-3 rounded-full bg-[#17052A]/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-[#FFD88C] border border-[#FFFFFF20]">
+              <span className="absolute top-3 left-3 rounded-full bg-[#17052A]/90 px-3 py-1 text-xs font-medium text-[#FFD88C] border border-[#FFFFFF20]">
                 {category.label}
               </span>
             </div>

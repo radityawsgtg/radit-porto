@@ -141,7 +141,8 @@ export default function Home() {
             <Image 
               src="/Vector 1.png" 
               alt="Profile Vector" 
-              fill 
+              fill
+                    sizes="(max-width: 768px) 300px, 524px" 
               className="object-contain" 
               priority 
             />
@@ -195,7 +196,7 @@ export default function Home() {
                   className="w-full max-w-[350px] card-facet card-facet-round card-facet-amber rounded-[32px] shadow-2xl p-6 flex flex-col items-center"
                 >
                   <div className="relative w-full aspect-video mb-6">
-                    <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
+                    <Image src={project.imageUrl} alt={project.title} fill sizes="320px" className="object-contain" />
                   </div>
                   <div className="bg-gradient-to-t from-[#FFB366] to-[#FFD88C] rounded-full py-2 px-6 border-2 border-[#FFB366] w-full mb-4">
                     <h3 className={`text-lg md:text-xl font-bold text-[#87095A] text-center truncate ${handron.className}`}>{project.title}</h3>

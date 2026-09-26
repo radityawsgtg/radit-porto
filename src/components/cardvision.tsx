@@ -37,6 +37,7 @@ export default function Cardvision() {
                             src={item.src}
                             alt="Vision Illustration"
                             fill
+                    sizes="(max-width: 768px) 90vw, 330px"
                             className="object-contain p-2"
                             priority
                         />    
