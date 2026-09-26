@@ -40,7 +40,7 @@ export default function ProjectCard() {
             href={project.projectUrl || "#"}
             target={project.projectUrl ? "_blank" : undefined}
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-2xl bg-[#2A0F4D] border border-[#FFFFFF15] overflow-hidden shadow-lg hover:border-[#BB83FF] hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] transition-all duration-300"
+            className="group flex flex-col card-facet card-facet-round card-facet-deep rounded-2xl overflow-hidden shadow-lg hover:border-[#BB83FF] hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] transition-all duration-300"
           >
             {/* Gambar project */}
             <div className="relative w-full aspect-video bg-[#1B0A33]">

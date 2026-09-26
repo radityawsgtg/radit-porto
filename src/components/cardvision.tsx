@@ -29,7 +29,7 @@ export default function Cardvision() {
             {visiData.map((item) => (
                 <div 
                     key={item.id} 
-                    className="w-full max-w-[350px] md:max-w-[424px] min-h-[500px] md:h-[550px] rounded-[32px] flex-col flex bg-[#FFC76E] shadow-lg justify-center items-center border-[#FF9955] border-4 p-4 md:p-6 transition-transform hover:scale-105"
+                    className="w-full max-w-[350px] md:max-w-[424px] min-h-[500px] md:h-[550px] card-facet card-facet-round card-facet-amber rounded-[32px] flex-col flex shadow-lg justify-center items-center p-4 md:p-6 transition-transform hover:scale-105"
                 >
                     {/* Container Gambar Responsif */}
                     <div className="relative w-full aspect-video md:w-[327px] md:h-[206px]">

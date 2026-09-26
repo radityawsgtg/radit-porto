@@ -192,7 +192,7 @@ export default function Home() {
                     }
                   }}
                   exit={{ opacity: 0, x: direction * -50 }}
-                  className="w-full max-w-[350px] rounded-[32px] bg-[#FFC76E] shadow-2xl border-[#FF9955] border-4 p-6 flex flex-col items-center"
+                  className="w-full max-w-[350px] card-facet card-facet-round card-facet-amber rounded-[32px] shadow-2xl p-6 flex flex-col items-center"
                 >
                   <div className="relative w-full aspect-video mb-6">
                     <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
@@ -215,7 +215,7 @@ export default function Home() {
       {/* 5. TOOLS SECTION */}
       <section className="relative z-20 py-24 px-4 max-w-6xl mx-auto ">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-12 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
-        <div className="rounded-[40px] bg-[#340F5C] border-4 border-[#58199c]/30 p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
+        <div className="card-facet card-facet-round card-facet-deep rounded-[40px] p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
           {[
             { title: "Frontend", data: WebsiteToolsData },
             { title: "Backend", data: BackendToolsData },

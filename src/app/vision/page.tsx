@@ -62,7 +62,7 @@ export default function VisionPage() {
                 
                 {/* Konten Vision */}
                 <div className="flex flex-row items-center justify-center p-5 gap-10 mx-auto max-w-4xl">
-                    <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
+                    <div className="flex flex-col md:flex-row items-center w-full h-auto card-facet card-facet-amber overflow-hidden">
                     <div className="w-full md:w-1/2 p-10">
                         <img src="/KATY.JPG" alt="Vision" className="w-full h-auto object-cover rounded-2xl" />
                     </div>
@@ -79,7 +79,7 @@ export default function VisionPage() {
                 
                 {/* Konten Mission */}
                 <div className="flex flex-row items-center justify-center p-10 pb-50 gap-10 mx-auto max-w-4xl">
-                    <div className="items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
+                    <div className="items-center w-full h-auto card-facet card-facet-amber overflow-hidden">
                     <div className="w-full p-10">
                         <p className={`text-[#6F0E4E] text-center text-lg font-medium ${roboto.className}`}>I aim to develop educational platforms that are not only intelligent but also character-driven, promoting values of logic, empathy, and wisdom (2C1B: Cerdas, Cemerlang, Bijaksana). In the short term, I’m building accessible learning content, and in the long term, I envision founding an EduTech platform that redefines how Indonesia learns. By combining innovation, collaboration, and social contribution, I want to be part of shaping a more inclusive and prepared nation for 2045.</p>
                     </div>

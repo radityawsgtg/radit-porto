@@ -102,7 +102,7 @@ export default function AboutMe() {
                         </div>
 
                         {/* Card */}
-                        <div className="flex flex-col md:flex-row items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
+                        <div className={`flex flex-col md:flex-row items-center p-6 shadow-lg card-facet card-facet-round card-facet-violet rounded-2xl`}>
                             <div className="mr-0 md:mr-6 mb-4 md:mb-0 flex-shrink-0">
                             <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden mx-auto md:mx-0">
                                 <Image src={item.logo} alt="Logo" width={50} height={50} className="object-contain" />
@@ -148,7 +148,7 @@ export default function AboutMe() {
                         </div>
 
                         {/* Card */}
-                        <div className="flex flex-col md:flex-row items-center p-6 rounded-2xl border-2 border-[#6F20C2] bg-gradient-to-r from-[#BB83FF] to-[#826F99] shadow-lg">
+                        <div className="flex flex-col md:flex-row items-center p-6 card-facet card-facet-round card-facet-violet rounded-2xl shadow-lg">
                             <div className="mr-0 md:mr-6 mb-4 md:mb-0 flex-shrink-0">
                             <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden mx-auto md:mx-0">
                                 <Image src={item.logo} alt="Logo" width={50} height={50} className="object-contain" />
