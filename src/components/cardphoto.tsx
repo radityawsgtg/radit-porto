@@ -22,7 +22,7 @@ const eureka = Eureka({
 export default function CardPhoto() {
 
     return(
-            <div className="w-auto relative h-137 rounded-4xl flex-col flex bg-[#FFC76E] mx-auto mt-10 shadow-lg justify-center items-center border-[#FF9955] border-4">
+            <div className="w-auto relative h-137 card-facet card-facet-round card-facet-amber rounded-4xl flex-col flex mx-auto mt-10 shadow-lg justify-center items-center">
                 <div className=" relative w-[327px] h-[206px] ">
                     <Image
                         src="/Rectangle 5873.png"

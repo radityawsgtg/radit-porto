@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
 import CardPhoto from "@/components/cardphoto";
@@ -34,8 +35,14 @@ export default function awardsPage (){
 
 
     return(
-            <main className=" relative min-h-screen w-full bg-[#17052A] overflow-hidden">
+            <main className=" relative isolate min-h-screen w-full overflow-hidden">
                 <Navbar />  
+                <Deco items={[
+                    { src: "crystal-crown", className: "top-[70px] left-1/2 -translate-x-1/2 w-44 md:w-60" },
+                    { src: "scepter", className: "top-[28%] left-2 w-16 md:w-28", rotate: -15 },
+                    { src: "crystal-wings", className: "top-[50%] -right-6 w-32 md:w-56", rotate: 8 },
+                    { src: "crystal-cluster", className: "top-[74%] -left-10 hidden md:block w-64", rotate: -6 },
+                ]} />
 
                 <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
                     <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
@@ -71,6 +78,7 @@ export default function awardsPage (){
                                             description={award.description}
                                             narasumber={award.narasumber}
                                             image={award.image}
+                                            link={award.link}
                                         />
                                     </motion.div>
                                 ))}

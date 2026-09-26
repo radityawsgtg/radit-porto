@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import { GitHubCalendar } from "react-github-calendar";
 import ProjectCard from "@/components/project";
 import { motion } from "framer-motion";
@@ -36,8 +37,13 @@ export default function ProjectPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full bg-[#17052A] overflow-hidden">
+        <main className="relative isolate min-h-screen w-full overflow-hidden">
             <Navbar />
+            <Deco items={[
+                { src: "potion", className: "top-[34%] -right-4 w-28 md:w-48", rotate: 12 },
+                { src: "crystal-key", className: "top-[58%] -left-2 w-20 md:w-32", rotate: -20 },
+                { src: "crystal-heart", className: "top-[80%] -right-10 hidden md:block w-60", rotate: 8 },
+            ]} />
             <motion.h2 
                 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
                 initial={{ opacity: 0, y: 30 }}

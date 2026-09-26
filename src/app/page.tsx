@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData, GraphicDesignToolsData } from '@/data/news.js';
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import Typewriter from "typewriter-effect";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -75,21 +76,36 @@ export default function Home() {
   };
 
   return (
-    <main className={`relative min-h-screen w-full overflow-x-hidden bg-[#17052A] ${roboto.variable}`}>
+    <main className={`relative isolate min-h-screen w-full overflow-x-hidden ${roboto.variable}`}>
       <Navbar />
+      <Deco items={[
+        { src: "crystal-cluster", className: "top-[36%] -left-12 w-40 md:w-80", rotate: -8 },
+        { src: "crystal-orb", className: "top-[52%] -right-6 w-28 md:w-56", rotate: 10 },
+        { src: "crystal-flowers", className: "top-[70%] -left-6 hidden md:block w-64", rotate: 6 },
+        { src: "compass", className: "top-[86%] -right-4 w-24 md:w-48", rotate: -12 },
+      ]} />
           
           {/* WRAPPER HERO: Ini adalah area gambar langitmu */}
-      <section className="relative w-full h-[800px] md:h-[180vh] flex flex-col items-center">
+      <section className="relative w-full h-[800px] md:h-auto md:aspect-[1980/1700] flex flex-col items-center">
         
         {/* 1. BACKGROUND IMAGE: Tanpa Zoom (Full Width) */}
-        <div className="absolute inset-0 z-0">
+        {/* Bottom of the scene fades into the page's textured background */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          }}
+        >
           <Image 
-            src="/bg.png" 
+            src="/bg.webp" 
             alt="Background" 
             fill 
             // object-cover memastikan lebar penuh, object-top memastikan gambar menempel ke atas
             className="object-cover object-top" 
             priority 
+            // Already compressed (86KB WebP), and the dev optimizer hung on the old PNG
+            unoptimized
           />
           {/* Overlay gradasi agar bagian bawah gambar menyatu halus dengan warna bg body */}
           
@@ -176,7 +192,7 @@ export default function Home() {
                     }
                   }}
                   exit={{ opacity: 0, x: direction * -50 }}
-                  className="w-full max-w-[350px] rounded-[32px] bg-[#FFC76E] shadow-2xl border-[#FF9955] border-4 p-6 flex flex-col items-center"
+                  className="w-full max-w-[350px] card-facet card-facet-round card-facet-amber rounded-[32px] shadow-2xl p-6 flex flex-col items-center"
                 >
                   <div className="relative w-full aspect-video mb-6">
                     <Image src={project.imageUrl} alt={project.title} fill className="object-contain" />
@@ -199,7 +215,7 @@ export default function Home() {
       {/* 5. TOOLS SECTION */}
       <section className="relative z-20 py-24 px-4 max-w-6xl mx-auto ">
         <h2 className={`text-[36px] md:text-[48px] font-bold text-center mb-12 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}>Tools and Technologies</h2>
-        <div className="rounded-[40px] bg-[#340F5C] border-4 border-[#58199c]/30 p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
+        <div className="card-facet card-facet-round card-facet-deep rounded-[40px] p-8 md:p-12 shadow-2xl flex flex-col gap-10 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
           {[
             { title: "Frontend", data: WebsiteToolsData },
             { title: "Backend", data: BackendToolsData },

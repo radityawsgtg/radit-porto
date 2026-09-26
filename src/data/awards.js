@@ -3,6 +3,22 @@
 // data/awards.js
 export const AwardsData = [
     {
+        id: 7,
+        title: "1st Place Health Track - Garuda Hacks 7.0",
+        description: "Together with my team from Informatika STEI ITB, I built PulihGo, a stroke rehabilitation app that uses the smartphone's gyroscope to measure joint angle and range of motion, count repetitions, and record movement quality while patients exercise at home. Therapists monitor progress remotely through a connected dashboard. As tech lead and researcher, I led the technical architecture and research behind the app, and we won 1st place in the Health Track at Universitas Multimedia Nusantara, Tangerang (16-18 July 2026).",
+        narasumber: "Garuda Hacks",
+        image: "/Awards/garudahacks.png",
+        link: "https://stei.itb.ac.id/pulihgo-antar-mahasiswa-stei-itb-raih-juara-1-health-track-garuda-hacks-7-0/"
+    },
+    {
+        id: 8,
+        title: "3rd Place BRIN AIDeaNation 2026",
+        description: "As team leader, I developed HujanNet, an AI system that turns existing BTS (cellular tower) networks into rainfall sensors. By analyzing how signal characteristics change during rain, HujanNet estimates precipitation intensity and provides early flood warnings without building new sensor infrastructure. The idea took 3rd place at BRIN AIDeaNation 2026 under the theme \"AI for Sustainable Future\" at JIExpo Kemayoran, Jakarta (13 August 2026).",
+        narasumber: "BRIN",
+        image: "/Awards/brin.jpg",
+        link: "https://stei.itb.ac.id/mahasiswa-stei-itb-raih-juara-3-brin-aideanation-2026-melalui-inovasi-hujannet/"
+    },
+    {
         id: 1,
         title: "Awardee of Beasiswa Unggulan 2025-2029 fully funded scholarship.",
         description: "I was awarded the Beasiswa Unggulan Kemendikbudristek 2025-2029 fully funded scholarship for undergraduate students. Received a fully funded scholarship for undergraduate studies. Recognized for academic excellence and potential",

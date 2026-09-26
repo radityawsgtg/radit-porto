@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import { GitHubCalendar } from "react-github-calendar";
 import CardPhoto from "@/components/cardphoto";
 import Cardvision from "@/components/cardvision";
@@ -30,8 +31,22 @@ export default function VisionPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full bg-[#17052A] ">
+        <main className="relative isolate min-h-screen w-full ">
             <Navbar />
+            <Deco items={[
+                { src: "crystal-key", className: "top-[12%] -right-2 w-20 md:w-28", rotate: 14 },
+                { src: "crystal-tree", className: "top-[30%] -left-14 hidden md:block w-72", rotate: -4 },
+                { src: "potion", className: "top-[82%] -right-4 w-24 md:w-40", rotate: 12 },
+            ]} />
+            {/* In front of the cards for depth: anchored to card corners (desktop layout), clear of the text */}
+            <Deco front items={[
+                { src: "crystal-flowers", className: "top-[12.5%] left-[calc(50%-500px)] hidden md:block w-44", rotate: -6 },
+                { src: "crystal-orb", className: "top-[20%] left-[calc(50%+350px)] hidden md:block w-32", rotate: 8 },
+                { src: "scepter", className: "top-[41%] left-[calc(50%-470px)] hidden md:block w-20", rotate: -18 },
+                { src: "crystal-wings", className: "top-[41.5%] left-[calc(50%+360px)] hidden md:block w-40", rotate: 10 },
+                { src: "crystal-cluster", className: "top-[63%] left-[calc(50%-420px)] hidden md:block w-52", rotate: -6 },
+                { src: "compass", className: "top-[67%] left-[calc(50%+170px)] hidden md:block w-40", rotate: 12 },
+            ]} />
 
             {/* SEKSI ATAS (Vision & Mission) dengan Background Berbintang */}
             <section className="relative pt-20">
@@ -47,7 +62,7 @@ export default function VisionPage() {
                 
                 {/* Konten Vision */}
                 <div className="flex flex-row items-center justify-center p-5 gap-10 mx-auto max-w-4xl">
-                    <div className="flex flex-col md:flex-row items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
+                    <div className="flex flex-col md:flex-row items-center w-full h-auto card-facet card-facet-amber overflow-hidden">
                     <div className="w-full md:w-1/2 p-10">
                         <img src="/KATY.JPG" alt="Vision" className="w-full h-auto object-cover rounded-2xl" />
                     </div>
@@ -64,7 +79,7 @@ export default function VisionPage() {
                 
                 {/* Konten Mission */}
                 <div className="flex flex-row items-center justify-center p-10 pb-50 gap-10 mx-auto max-w-4xl">
-                    <div className="items-center w-full h-auto rounded-2xl bg-[#FFD88C] border-4 border-[#FFB366] overflow-hidden">
+                    <div className="items-center w-full h-auto card-facet card-facet-amber overflow-hidden">
                     <div className="w-full p-10">
                         <p className={`text-[#6F0E4E] text-center text-lg font-medium ${roboto.className}`}>I aim to develop educational platforms that are not only intelligent but also character-driven, promoting values of logic, empathy, and wisdom (2C1B: Cerdas, Cemerlang, Bijaksana). In the short term, I’m building accessible learning content, and in the long term, I envision founding an EduTech platform that redefines how Indonesia learns. By combining innovation, collaboration, and social contribution, I want to be part of shaping a more inclusive and prepared nation for 2045.</p>
                     </div>
@@ -81,7 +96,7 @@ export default function VisionPage() {
             </section>
 
             {/* SEKSI BAWAH (Setelah Gunung) */}
-            <section className="bg-[#17052A] relative   z-10 pt-70 gap-10 items-center">
+            <section className="relative z-10 pt-70 gap-10 items-center">
                 <Cardvision/>    
                 
             </section>

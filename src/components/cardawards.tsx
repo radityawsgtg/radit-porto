@@ -15,6 +15,7 @@ interface AwardProps {
   description: string;
   narasumber: string;
   image: string;
+  link?: string;
 }
 
 const eureka = Eureka({ 
@@ -27,11 +28,11 @@ const handron = Handron({
   variable: '--font-handron'
 });
 
-export default function CardAward({ title, description, narasumber, image }: AwardProps) {
+export default function CardAward({ title, description, narasumber, image, link }: AwardProps) {
     return (
         <div className="flex flex-col items-center w-full mb-16">
         {/* Container Kartu Utama */}
-        <div className="relative w-full max-w-4xl p-6 md:p-10 rounded-[40px] border-[4px] border-[#340F5C] bg-[#340F5C] z-10  mx-auto  h-auto justify-center  mt-10  shadow-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
+        <div className="relative w-full max-w-4xl p-6 md:p-10 card-facet card-facet-round card-facet-deep rounded-[40px] z-10  mx-auto  h-auto justify-center  mt-10  shadow-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] hover:border-[#c9a0ff] transition-all duration-300">
             
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative z-10">
             
@@ -67,7 +68,8 @@ export default function CardAward({ title, description, narasumber, image }: Awa
         </div>
 
         {/* Tombol Lebih Lanjut (Melayang di Garis Tengah Bawah) */}
-        <div className="mt-[-80px] z-20 transition-transform hover:scale-110 active:scale-95 cursor-pointer">
+        {link && (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="mt-[-80px] z-20 transition-transform hover:scale-110 active:scale-95">
             <Image 
             src="/lela.png" 
             alt="Lebih Lanjut" 
@@ -75,7 +77,8 @@ export default function CardAward({ title, description, narasumber, image }: Awa
             height={400} 
             className="drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)]"
             />
-        </div>
+        </a>
+        )}
         </div>
     );
     }
