@@ -3,7 +3,7 @@ import Image from "next/image";
 import Handron from "next/font/local";
 import { Poppins } from "next/font/google";
 import { ExternalLink } from "lucide-react";
-import { ProjectWeb, GameDev, MachineLearning } from "@/data/project.js";
+import { ProjectWeb, GameDev, MachineLearning, MobileDev } from "@/data/project.js";
 import Link from 'next/link';
 
 // Konfigurasi Font
@@ -19,17 +19,24 @@ const poppins = Poppins({
 
 const CATEGORIES = [
   { label: "Web Development", data: ProjectWeb, icons: ["/next.svg", "/Tailwind.svg"] },
+  { label: "Mobile Development", data: MobileDev, icons: ["/react.png", "/typescript.png", "/supabase-icon.png"] },
   { label: "Game Development", data: GameDev, icons: ["/python.png"] },
   { label: "Machine Learning", data: MachineLearning, icons: ["/python.png", "/mp.jpg"] },
 ];
 
+const dateOf = (project: object) => ("date" in project ? String(project.date) : "");
+
+// Projects with a `date` (YYYY-MM) go first, newest first; undated ones keep their order.
+const PROJECTS = CATEGORIES
+  .flatMap((category) => category.data.map((project) => ({ category, project })))
+  .sort((a, b) => dateOf(b.project).localeCompare(dateOf(a.project)));
+
 export default function ProjectCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto p-4 sm:p-8 md:p-12">
-      {CATEGORIES.map((category) =>
-        category.data.map((project) => (
+      {PROJECTS.map(({ category, project }) => (
           <Link
-            key={project.id}
+            key={`${category.label}-${project.id}`}
             href={project.projectUrl || "#"}
             target={project.projectUrl ? "_blank" : undefined}
             rel="noopener noreferrer"
@@ -70,8 +77,7 @@ export default function ProjectCard() {
               </div>
             </div>
           </Link>
-        ))
-      )}
+      ))}
     </div>
   );
 }

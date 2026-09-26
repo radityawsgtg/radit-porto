@@ -4,6 +4,7 @@ import Handron from "next/font/local";
 import Eureka from "next/font/local";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import { motion } from "framer-motion";
 
 
@@ -39,8 +40,13 @@ export default function AboutMe() {
   ];
 
   return (
-    <main className={`${eureka.variable} ${roboto.variable} relative min-h-screen w-full pb-20`}>
+    <main className={`${eureka.variable} ${roboto.variable} relative isolate min-h-screen w-full pb-20`}>
         <Navbar />
+        <Deco items={[
+          { src: "crystal-tree", className: "top-[6%] -right-16 hidden md:block w-80", rotate: 4 },
+          { src: "crystal-wings", className: "top-[44%] -left-8 w-28 md:w-48", rotate: -10 },
+          { src: "crystal-flowers", className: "top-[74%] -right-8 w-32 md:w-56", rotate: 8 },
+        ]} />
 
 
         <div className="max-w-5xl mx-auto px-10 pt-20">

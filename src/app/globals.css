@@ -29,7 +29,7 @@ body {
 /* Textured purple page background; overlay alpha controls texture strength */
 .bg-texture {
   background:
-    linear-gradient(rgba(23, 5, 42, 0.2), rgba(23, 5, 42, 0.2)),
+    linear-gradient(rgba(23, 5, 42, 0.1), rgba(23, 5, 42, 0.1)),
     url("/bgtexture.jpg") center / cover fixed,
     #17052A;
 }
@@ -64,3 +64,12 @@ body {
 }
 
 ::selection { background: #FFD88C; color: #17052A; }
+
+/* Page illustrations (src/components/Deco.tsx) */
+.deco-float {
+  animation: puzzle-float 9s ease-in-out infinite;
+  filter: drop-shadow(0 0 28px rgba(187, 131, 255, 0.35));
+}
+@media (prefers-reduced-motion: reduce) {
+  .deco-float { animation: none; transform: rotate(var(--r, 0deg)); }
+}

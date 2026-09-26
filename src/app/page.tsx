@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData, GraphicDesignToolsData } from '@/data/news.js';
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import Typewriter from "typewriter-effect";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -75,8 +76,14 @@ export default function Home() {
   };
 
   return (
-    <main className={`relative min-h-screen w-full overflow-x-hidden ${roboto.variable}`}>
+    <main className={`relative isolate min-h-screen w-full overflow-x-hidden ${roboto.variable}`}>
       <Navbar />
+      <Deco items={[
+        { src: "crystal-cluster", className: "top-[36%] -left-12 w-40 md:w-80", rotate: -8 },
+        { src: "crystal-orb", className: "top-[52%] -right-6 w-28 md:w-56", rotate: 10 },
+        { src: "crystal-flowers", className: "top-[70%] -left-6 hidden md:block w-64", rotate: 6 },
+        { src: "compass", className: "top-[86%] -right-4 w-24 md:w-48", rotate: -12 },
+      ]} />
           
           {/* WRAPPER HERO: Ini adalah area gambar langitmu */}
       <section className="relative w-full h-[800px] md:h-auto md:aspect-[1980/1700] flex flex-col items-center">

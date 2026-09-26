@@ -52,6 +52,14 @@ export const ProjectWeb = [
 ];
 
 export const MachineLearning = [
+    {
+        id: 2,
+        name: "HujanNet - Rainfall Estimation from Cellular Signals",
+        date: "2026-08",
+        imageUrl: "/Awards/brin.jpg",
+        projectUrl: "https://stei.itb.ac.id/mahasiswa-stei-itb-raih-juara-3-brin-aideanation-2026-melalui-inovasi-hujannet/",
+        description: "An AI system that turns existing BTS (cellular tower) networks into rainfall sensors. HujanNet learns how signal characteristics change during rain to estimate precipitation intensity and raise early flood warnings, with no new sensor infrastructure needed. 3rd place at BRIN AIDeaNation 2026.",
+        technologies: ["Python", "Machine Learning"]},
 
     {
         id: 1, 
@@ -71,4 +79,15 @@ export const GameDev = [
         projectUrl: "https://github.com/radityawsgtg/Toll-Gate-Guard-Frontier-2025", 
         description: "A strategic tower defense game set in a futuristic frontier where players defend toll gates from waves of enemy invaders.",
         technologies: ["Unity", "C#", "Blender", "Photoshop", "FMOD"]},
+];
+
+export const MobileDev = [
+    {
+        id: 1,
+        name: "PulihGo - Stroke Rehab Companion",
+        date: "2026-07",
+        imageUrl: "/images/pulihgo.jpg",
+        projectUrl: "https://devpost.com/software/pulihgo",
+        description: "A smartphone app that continues post-stroke rehabilitation safely at home. It uses the phone's gyroscope to track forearm pronation/supination and flexion/extension, counts repetitions, and measures range of motion against personalized limits, with pain checks before and during each session. Therapists follow progress through a connected dashboard. 1st place Health Track at Garuda Hacks 7.0.",
+        technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL"]},
 ];

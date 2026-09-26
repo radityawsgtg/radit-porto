@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Deco from "@/components/Deco";
 import { GitHubCalendar } from "react-github-calendar";
 import CardPhoto from "@/components/cardphoto";
 import Cardvision from "@/components/cardvision";
@@ -30,8 +31,22 @@ export default function VisionPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full ">
+        <main className="relative isolate min-h-screen w-full ">
             <Navbar />
+            <Deco items={[
+                { src: "crystal-key", className: "top-[12%] -right-2 w-20 md:w-28", rotate: 14 },
+                { src: "crystal-tree", className: "top-[30%] -left-14 hidden md:block w-72", rotate: -4 },
+                { src: "potion", className: "top-[82%] -right-4 w-24 md:w-40", rotate: 12 },
+            ]} />
+            {/* In front of the cards for depth: anchored to card corners (desktop layout), clear of the text */}
+            <Deco front items={[
+                { src: "crystal-flowers", className: "top-[12.5%] left-[calc(50%-500px)] hidden md:block w-44", rotate: -6 },
+                { src: "crystal-orb", className: "top-[20%] left-[calc(50%+350px)] hidden md:block w-32", rotate: 8 },
+                { src: "scepter", className: "top-[41%] left-[calc(50%-470px)] hidden md:block w-20", rotate: -18 },
+                { src: "crystal-wings", className: "top-[41.5%] left-[calc(50%+360px)] hidden md:block w-40", rotate: 10 },
+                { src: "crystal-cluster", className: "top-[63%] left-[calc(50%-420px)] hidden md:block w-52", rotate: -6 },
+                { src: "compass", className: "top-[67%] left-[calc(50%+170px)] hidden md:block w-40", rotate: 12 },
+            ]} />
 
             {/* SEKSI ATAS (Vision & Mission) dengan Background Berbintang */}
             <section className="relative pt-20">
@@ -81,7 +96,7 @@ export default function VisionPage() {
             </section>
 
             {/* SEKSI BAWAH (Setelah Gunung) */}
-            <section className="bg-[#17052A] relative   z-10 pt-70 gap-10 items-center">
+            <section className="relative z-10 pt-70 gap-10 items-center">
                 <Cardvision/>    
                 
             </section>
