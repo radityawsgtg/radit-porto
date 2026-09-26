@@ -25,3 +25,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Textured purple page background; overlay alpha controls texture strength */
+.bg-texture {
+  background:
+    linear-gradient(rgba(23, 5, 42, 0.2), rgba(23, 5, 42, 0.2)),
+    url("/bgtexture.jpg") center / cover fixed,
+    #17052A;
+}
+
+/* Backdrop decorations (src/components/Backdrop.tsx) */
+@keyframes orb-breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-46%, -54%) scale(1.12); }
+}
+.orb-breathe {
+  animation: orb-breathe 20s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+@keyframes puzzle-float {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 8deg)); }
+}
+.puzzle-float { animation: puzzle-float 8s ease-in-out infinite; }
+
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: var(--o-lo, 0.15); transform: scale(0.7) rotate(0deg); }
+  50% { opacity: var(--o-hi, 0.7); transform: scale(1) rotate(45deg); }
+}
+.sparkle-twinkle {
+  animation: sparkle-twinkle 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(255, 216, 140, 0.6));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-breathe, .puzzle-float, .sparkle-twinkle { animation: none; }
+}
+
+::selection { background: #FFD88C; color: #17052A; }

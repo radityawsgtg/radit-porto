@@ -75,21 +75,30 @@ export default function Home() {
   };
 
   return (
-    <main className={`relative min-h-screen w-full overflow-x-hidden bg-[#17052A] ${roboto.variable}`}>
+    <main className={`relative min-h-screen w-full overflow-x-hidden ${roboto.variable}`}>
       <Navbar />
           
           {/* WRAPPER HERO: Ini adalah area gambar langitmu */}
-      <section className="relative w-full h-[800px] md:h-[180vh] flex flex-col items-center">
+      <section className="relative w-full h-[800px] md:h-auto md:aspect-[1980/1700] flex flex-col items-center">
         
         {/* 1. BACKGROUND IMAGE: Tanpa Zoom (Full Width) */}
-        <div className="absolute inset-0 z-0">
+        {/* Bottom of the scene fades into the page's textured background */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          }}
+        >
           <Image 
-            src="/bg.png" 
+            src="/bg.webp" 
             alt="Background" 
             fill 
             // object-cover memastikan lebar penuh, object-top memastikan gambar menempel ke atas
             className="object-cover object-top" 
             priority 
+            // Already compressed (86KB WebP), and the dev optimizer hung on the old PNG
+            unoptimized
           />
           {/* Overlay gradasi agar bagian bawah gambar menyatu halus dengan warna bg body */}
           

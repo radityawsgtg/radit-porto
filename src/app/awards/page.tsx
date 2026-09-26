@@ -34,7 +34,7 @@ export default function awardsPage (){
 
 
     return(
-            <main className=" relative min-h-screen w-full bg-[#17052A] overflow-hidden">
+            <main className=" relative min-h-screen w-full overflow-hidden">
                 <Navbar />  
 
                 <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
@@ -71,6 +71,7 @@ export default function awardsPage (){
                                             description={award.description}
                                             narasumber={award.narasumber}
                                             image={award.image}
+                                            link={award.link}
                                         />
                                     </motion.div>
                                 ))}

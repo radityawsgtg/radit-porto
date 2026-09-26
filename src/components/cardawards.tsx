@@ -15,6 +15,7 @@ interface AwardProps {
   description: string;
   narasumber: string;
   image: string;
+  link?: string;
 }
 
 const eureka = Eureka({ 
@@ -27,7 +28,7 @@ const handron = Handron({
   variable: '--font-handron'
 });
 
-export default function CardAward({ title, description, narasumber, image }: AwardProps) {
+export default function CardAward({ title, description, narasumber, image, link }: AwardProps) {
     return (
         <div className="flex flex-col items-center w-full mb-16">
         {/* Container Kartu Utama */}
@@ -67,7 +68,8 @@ export default function CardAward({ title, description, narasumber, image }: Awa
         </div>
 
         {/* Tombol Lebih Lanjut (Melayang di Garis Tengah Bawah) */}
-        <div className="mt-[-80px] z-20 transition-transform hover:scale-110 active:scale-95 cursor-pointer">
+        {link && (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="mt-[-80px] z-20 transition-transform hover:scale-110 active:scale-95">
             <Image 
             src="/lela.png" 
             alt="Lebih Lanjut" 
@@ -75,7 +77,8 @@ export default function CardAward({ title, description, narasumber, image }: Awa
             height={400} 
             className="drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)]"
             />
-        </div>
+        </a>
+        )}
         </div>
     );
     }

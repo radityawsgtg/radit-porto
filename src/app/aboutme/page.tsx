@@ -25,7 +25,8 @@ const eureka = Eureka({
 
 export default function AboutMe() { 
   const workExperience = [
-    
+    { date: "2026", title: "OSKM ITB 2026", desc: "Web Developer for the OSKM ITB 2026 platform, building the web experience for ITB's new student orientation.", logo: "/oskm.webp" },
+    { date: "2026", title: "Wisuda April ITB 2026", desc: "Web developer for the April 2026 ITB graduation event.", logo: "/ITB.png" },
     { date: "2025 - 2026", title: "Aku Masuk ITB 2026", desc: "Frontend Developer focused on building e-commerce platforms and landing pages that support AMI’s mission in promoting access to higher education.", logo: "/ami.png" },
     { date: " 2025", title: " Wisokto ITB 2025", desc: "Backend developer for the graduation parade web application, facilitating event management and participant coordination.", logo: "/Wisok.png" },
     { date: "2024 - 2025", title: "SaTe App", desc: "Frontend developer for a mobile app to connect alumni and current students of SMAN 1 Teladan Yogyakarta.", logo: "/TLD.png" },
@@ -38,7 +39,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <main className={`${eureka.variable} ${roboto.variable} relative min-h-screen w-full bg-[#17052A] pb-20`}>
+    <main className={`${eureka.variable} ${roboto.variable} relative min-h-screen w-full pb-20`}>
         <Navbar />
 
 

@@ -30,7 +30,7 @@ export default function VisionPage() {
     
 
     return (
-        <main className="relative min-h-screen w-full bg-[#17052A] ">
+        <main className="relative min-h-screen w-full ">
             <Navbar />
 
             {/* SEKSI ATAS (Vision & Mission) dengan Background Berbintang */}
