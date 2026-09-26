@@ -2,7 +2,7 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: #17052A;
   --foreground: #171717;
 }
 
@@ -15,9 +15,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #17052A;
     --foreground: #ededed;
   }
+}
+
+/* iOS Safari can zoom out to fit off-canvas decorations; clip (unlike hidden) keeps sticky/fixed working */
+html,
+body {
+  overflow-x: clip;
 }
 
 body {
@@ -30,7 +36,9 @@ body {
 .bg-texture {
   background:
     linear-gradient(rgba(23, 5, 42, 0.1), rgba(23, 5, 42, 0.1)),
-    url("/bgtexture.jpg") center / cover fixed,
+    /* Mirrored 2x2 tile repeats seamlessly at native size instead of being stretched by cover,
+       so phones don't upscale it into mush. 1598px tile drawn at 799px = 1:1 on 2x screens. */
+    url("/bgtexture-tile.webp") top center / 799px auto repeat,
     #17052A;
 }
 
@@ -41,14 +49,14 @@ body {
 }
 .orb-breathe {
   animation: orb-breathe 20s ease-in-out infinite;
-  filter: blur(20px);
+  will-change: transform;
 }
 
 @keyframes puzzle-float {
   0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
   50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 8deg)); }
 }
-.puzzle-float { animation: puzzle-float 8s ease-in-out infinite; }
+.puzzle-float { animation: puzzle-float 8s ease-in-out infinite; will-change: transform; }
 
 @keyframes sparkle-twinkle {
   0%, 100% { opacity: var(--o-lo, 0.15); transform: scale(0.7) rotate(0deg); }
@@ -56,7 +64,7 @@ body {
 }
 .sparkle-twinkle {
   animation: sparkle-twinkle 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 4px rgba(255, 216, 140, 0.6));
+  will-change: transform, opacity;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -69,6 +77,8 @@ body {
 .deco-float {
   animation: puzzle-float 9s ease-in-out infinite;
   filter: drop-shadow(0 0 28px rgba(187, 131, 255, 0.35));
+  /* own GPU layer: the glow is rasterized once, then only moved */
+  will-change: transform;
 }
 @media (prefers-reduced-motion: reduce) {
   .deco-float { animation: none; transform: rotate(var(--r, 0deg)); }

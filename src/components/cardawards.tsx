@@ -38,12 +38,13 @@ export default function CardAward({ title, description, narasumber, image, link 
             
             {/* Sisi Kiri: Gambar & Badge */}
             <div className="flex flex-col items-center gap-6 w-full md:w-auto">
-                <div className="bg-white/10 p-4 rounded-3xl w-64 h-64 md:w-72 md:h-72 relative border border-white/20 backdrop-blur-sm">
+                <div className="bg-white/10 p-4 rounded-3xl w-64 h-64 md:w-72 md:h-72 relative border border-white/20">
                 <div className="w-full h-full relative">
                     <Image
                     src={image}
                     alt={title}
                     fill
+                    sizes="288px"
                     className="object-contain"
                     />
                 </div>

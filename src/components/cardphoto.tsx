@@ -28,6 +28,7 @@ export default function CardPhoto() {
                         src="/Rectangle 5873.png"
                         alt="Vector2"
                         fill
+                    sizes="(max-width: 768px) 90vw, 420px"
                         className="object-contain p-2"
                         priority
                     />    

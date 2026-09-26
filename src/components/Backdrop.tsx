@@ -48,7 +48,17 @@ type Vars = CSSProperties & Record<`--${string}`, string | number>;
 
 export default function Backdrop() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    // The texture lives on this fixed layer (not body + background-attachment:fixed, which repaints every scroll frame).
+    <div aria-hidden className="bg-texture pointer-events-none fixed inset-0 z-0 overflow-hidden [contain:strict]">
+      {/* Shared glow for the sparkles: baked into the SVG so the twinkle animates without a per-frame filter */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <radialGradient id="sparkle-glow">
+            <stop offset="0%" stopColor="#FFD88C" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="#FFD88C" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
       {ORBS.map((o, i) => (
         <div
           key={`orb-${i}`}
@@ -95,19 +105,20 @@ export default function Backdrop() {
       {SPARKLES.map((s, i) => (
         <svg
           key={`spk-${i}`}
-          viewBox="0 0 24 24"
+          viewBox="-6 -6 36 36"
           className="sparkle-twinkle absolute"
           style={{
             top: `${s.top}%`,
             left: `${s.left}%`,
-            width: s.size,
-            height: s.size,
+            width: s.size * 1.5,
+            height: s.size * 1.5,
             "--o-lo": s.lo,
             "--o-hi": s.hi,
             animationDuration: `${s.dur}s`,
             animationDelay: `${s.delay}s`,
           } as Vars}
         >
+          <circle cx="12" cy="12" r="15" fill="url(#sparkle-glow)" />
           <path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z" fill="#FFD88C" />
         </svg>
       ))}
