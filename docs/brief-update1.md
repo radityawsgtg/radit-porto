@@ -9,7 +9,7 @@ Bukan membangun dari nol.
 
 Bagian bertanda `<ISI: ...>` wajib diisi manual. Tanpa itu hasilnya akan
 mengarang. Isi seadanya tidak apa-apa, yang penting jujur.
-
+ okeh
 ---
 
 ## 1. Kenapa ini dikerjakan sekarang
