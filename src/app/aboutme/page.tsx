@@ -51,8 +51,8 @@ export default function AboutMe() {
 
         <div className="max-w-5xl mx-auto px-10 pt-20">
             <motion.h2
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: -30 }}
+                whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className={`text-[48px] pt-15 font-bold text-center mb-5 text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
@@ -68,8 +68,8 @@ export default function AboutMe() {
             {/* Working Experience Section */}
             <div>
                 <motion.h2
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ x: -30 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                     className="text-[#FFD88C] text-3xl mb-10 font-[family-name:var(--font-eureka)]"
@@ -83,7 +83,7 @@ export default function AboutMe() {
                     {workExperience.map((item, index) => (
                         <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 40 }}
+                        initial={index < 2 ? { y: 40 } : { opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{

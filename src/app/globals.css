@@ -9,8 +9,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +38,15 @@ body {
        so phones don't upscale it into mush. 1598px tile drawn at 799px = 1:1 on 2x screens. */
     url("/bgtexture-tile.webp") top center / 799px auto repeat,
     #17052A;
+}
+/* Phones: one crop of the original texture, no tiling. 799px source drawn ~400px wide = 2x density, so it stays sharp. */
+@media (max-width: 767px) {
+  .bg-texture {
+    background:
+      linear-gradient(rgba(23, 5, 42, 0.1), rgba(23, 5, 42, 0.1)),
+      url("/bgtexture.jpg") top center / max(400px, 100vw) auto no-repeat,
+      #17052A;
+  }
 }
 
 /* Backdrop decorations (src/components/Backdrop.tsx) */
@@ -159,4 +166,9 @@ body {
   --dot: rgba(40, 0, 80, 0.24);
   --edge: rgba(250, 242, 255, 0.9);
 }
+}
+
+/* Decorative loops stay paused until the page has loaded (class added in layout.tsx), keeping first render cheap */
+html:not(.anim-ready) :is(.orb-breathe, .sparkle-twinkle, .puzzle-float, .deco-float) {
+  animation-play-state: paused;
 }

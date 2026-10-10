@@ -34,7 +34,7 @@ const PROJECTS = CATEGORIES
 export default function ProjectCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto p-4 sm:p-8 md:p-12">
-      {PROJECTS.map(({ category, project }) => (
+      {PROJECTS.map(({ category, project }, index) => (
           <Link
             key={`${category.label}-${project.id}`}
             href={project.projectUrl || "#"}
@@ -49,6 +49,7 @@ export default function ProjectCard() {
                 alt={project.name}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
+                priority={index < 2}
                 className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
               />
               <span className="absolute top-3 left-3 rounded-full bg-[#17052A]/90 px-3 py-1 text-xs font-medium text-[#FFD88C] border border-[#FFFFFF20]">

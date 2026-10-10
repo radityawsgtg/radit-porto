@@ -46,8 +46,8 @@ export default function ProjectPage() {
             ]} />
             <motion.h2 
                 className={`text-[48px] pt-15 font-bold text-center mb-10 z-10 relative text-[#FFD88C] [text-shadow:0_3px_19px_#FFD88C50] ${handron.className}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >PROJECTS</motion.h2>
 
@@ -70,8 +70,8 @@ export default function ProjectPage() {
             {/* Konten halaman project dapat ditambahkan di sini */}
             <motion.div 
                 className="relative z-10 rounded-2xl w-full max-w-6xl mx-auto [&_span]:text-white [&_text]:fill-white p-8 bg-[#1B0A33]/75 border-2 border border-[#FFFFFF20] hover:shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:border-[#BB83FF] transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
             >
@@ -93,8 +93,8 @@ export default function ProjectPage() {
 
             </motion.div>
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
             >

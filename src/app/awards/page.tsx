@@ -45,7 +45,7 @@ export default function awardsPage (){
                 ]} />
 
                 <div className="absolute -top-1 -right-200 w-350 h-350 rotate-12 opacity-80">
-                    <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} className="object-contain" />
+                    <Image src="/PuzA1.png" alt="puzzle" width={500} height={500} priority className="object-contain" />
                 </div>
                 <div className="absolute top-1/4  w-350 h-350 rotate-1 opacity-80">
                     <Image src="/PuzT1.png" alt="puzzle" width={300} height={300} className="object-contain" />
@@ -64,7 +64,7 @@ export default function awardsPage (){
                                 {AwardsData.map((award, index) => (
                                     <motion.div
                                     key={award.id}
-                                    initial={{ opacity: 0, y: 50 }}
+                                    initial={index === 0 ? { y: 50 } : { opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.2 }}
                                     transition={{
