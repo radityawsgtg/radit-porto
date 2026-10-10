@@ -1,31 +1,15 @@
 "use client";
+import { handron, roboto } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Deco from "@/components/Deco";
-import { GitHubCalendar } from "react-github-calendar";
 import CardPhoto from "@/components/cardphoto";
 import Cardvision from "@/components/cardvision";
 
-const handron = Handron({ 
-  src: '../../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
-});
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
-const eureka = Eureka({ 
-  src: '../../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
-});
 
 export default function VisionPage() {
     

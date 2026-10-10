@@ -1,21 +1,11 @@
 "use client";
+import { handron, roboto } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import { Poppins } from "next/font/google";
 import { ExternalLink } from "lucide-react";
 import { ProjectWeb, GameDev, MachineLearning, MobileDev } from "@/data/project.js";
 import Link from 'next/link';
 
 // Konfigurasi Font
-const handron = Handron({
-  src: '../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
-});
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-poppins',
-});
 
 const CATEGORIES = [
   { label: "Web Development", data: ProjectWeb, icons: ["/next.svg", "/Tailwind.svg"] },
@@ -62,7 +52,7 @@ export default function ProjectCard() {
               <h3 className={`text-lg sm:text-xl text-[#fde0a3] mb-2 ${handron.className}`}>
                 {project.name}
               </h3>
-              <p className={`text-sm text-white/80 leading-relaxed flex-1 ${poppins.className}`}>
+              <p className={`text-sm text-white/80 leading-relaxed flex-1 ${roboto.className}`}>
                 {project.description}
               </p>
 
@@ -72,7 +62,7 @@ export default function ProjectCard() {
                     <Image src={iconPath} alt="Tech icon" width={18} height={18} className="w-[18px] h-[18px] object-contain" />
                   </div>
                 ))}
-                <span className={`ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-[#BB83FF] group-hover:text-[#e9d5ff] transition-colors ${poppins.className}`}>
+                <span className={`ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-[#BB83FF] group-hover:text-[#e9d5ff] transition-colors ${roboto.className}`}>
                   Lihat Project <ExternalLink size={14} />
                 </span>
               </div>

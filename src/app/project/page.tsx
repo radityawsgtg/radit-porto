@@ -1,35 +1,26 @@
 "use client";
+import { handron, eureka } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
 import { use } from "react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Deco from "@/components/Deco";
-import { GitHubCalendar } from "react-github-calendar";
+import dynamic from "next/dynamic";
 import ProjectCard from "@/components/project";
 import { motion } from "framer-motion";
 
-
-
-
-
-const handron = Handron({ 
-  src: '../../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
+// Calendar fetches its data client-side anyway; split it out of the initial bundle. Placeholder keeps the height (no layout shift).
+const GitHubCalendar = dynamic(() => import("react-github-calendar").then((m) => m.GitHubCalendar), {
+    ssr: false,
+    loading: () => <div className="h-[221px] md:h-[193px]" />,
 });
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
-const eureka = Eureka({ 
-  src: '../../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
-});
+
+
+
+
+
 
 
 

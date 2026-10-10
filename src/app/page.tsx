@@ -1,8 +1,6 @@
 "use client";
+import { handron, eureka, roboto } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
 import { BackendToolsData, DatabaseToolsData, ProjectData, WebsiteToolsData, GraphicDesignToolsData } from '@/data/news.js';
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
@@ -11,9 +9,6 @@ import Typewriter from "typewriter-effect";
 import { AnimatePresence, motion } from "framer-motion";
 
 // --- Font Configurations ---
-const handron = Handron({ src: '../../public/fonts/Handron-Solid.otf', variable: '--font-handron' });
-const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-roboto' });
-const eureka = Eureka({ src: '../../public/fonts/Euskadi-Regular.otf', variable: '--font-eureka' });
 
 // --- Reusable WavyText Component ---
 const WavyText = ({ text, className, delayOffset = 0 }: { text: string, className: string, delayOffset?: number }) => {

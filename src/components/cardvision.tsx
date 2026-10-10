@@ -1,21 +1,10 @@
 "use client";
+import { handron, roboto } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
 
 
 // Inisialisasi font (Pastikan path benar)
-const handron = Handron({ 
-  src: '../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
-});
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
 const visiData = [
     {id:1, title: "Terbentur", description: "I welcome the initial \"impact\" of complex problems. Every technical hurdle or societal challenge is a starting point that demands curiosity and action.",   src: "/Terb1.jpeg" },

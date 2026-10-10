@@ -1,22 +1,7 @@
+import { handron, roboto } from "@/app/fonts";
 import Image from "next/image";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
-import { Roboto } from "next/font/google";
 
-const handron = Handron({ 
-  src: '../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
-});
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
-const eureka = Eureka({ 
-  src: '../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
-});
 
 
 export default function CardPhoto() {

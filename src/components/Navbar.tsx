@@ -1,15 +1,10 @@
 "use client";
+import { roboto } from "@/app/fonts";
 import React, { useState, useEffect } from 'react'; // Tambahkan useEffect
-import { Roboto } from "next/font/google";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, LayoutGrid, Eye, Trophy, User } from 'lucide-react';
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
 const navLink = [
   {name: "Home", href: '/', key: 'home', icon: Home},

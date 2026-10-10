@@ -1,4 +1,3 @@
-import { Bacasime_Antique } from "next/font/google";
 
 export const ProjectData = [
     {

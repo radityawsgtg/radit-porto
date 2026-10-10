@@ -1,14 +1,8 @@
 "use client";
+import { eureka, roboto } from "@/app/fonts";
 import Image from "next/image";
-import { Roboto } from "next/font/google";
-import Handron from "next/font/local";
-import Eureka from "next/font/local";
 
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 interface AwardProps {
   title: string;
@@ -18,15 +12,7 @@ interface AwardProps {
   link?: string;
 }
 
-const eureka = Eureka({ 
-  src: '../../public/fonts/Euskadi-Regular.otf',
-  variable: '--font-eureka'
-});
 
-const handron = Handron({ 
-  src: '../../public/fonts/Handron-Solid.otf',
-  variable: '--font-handron'
-});
 
 export default function CardAward({ title, description, narasumber, image, link }: AwardProps) {
     return (
