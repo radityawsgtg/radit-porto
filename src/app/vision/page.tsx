@@ -34,7 +34,7 @@ export default function VisionPage() {
         <main className="relative isolate min-h-screen w-full ">
             <Navbar />
             <Deco items={[
-                { src: "crystal-key", className: "top-[12%] -right-2 w-20 md:w-28", rotate: 14 },
+                { src: "crystal-key", className: "top-[12%] -right-2 hidden md:block w-28", rotate: 14 },
                 { src: "crystal-tree", className: "top-[30%] -left-14 hidden md:block w-72", rotate: -4 },
                 { src: "potion", className: "top-[82%] -right-4 w-24 md:w-40", rotate: 12 },
             ]} />

@@ -104,6 +104,7 @@ export default function Home() {
             // object-cover memastikan lebar penuh, object-top memastikan gambar menempel ke atas
             className="object-cover object-top" 
             priority 
+            fetchPriority="high"
             // Already compressed (86KB WebP), and the dev optimizer hung on the old PNG
             unoptimized
           />
@@ -227,7 +228,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 p-4 bg-white/5 rounded-3xl">
                 {cat.data.map((tool, i) => (
                   <div key={i} className="flex items-center gap-2 bg-[#441379] px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform cursor-default ">
-                    <img src={tool.imageUrl} alt={tool.name} className="w-5 h-5 object-contain"/>
+                    <Image src={tool.imageUrl} alt={tool.name} width={20} height={20} className="w-5 h-5 object-contain" />
                     <span className={`text-sm md:text-base font-bold text-[#ffffff] ${roboto.className}`}>{tool.name}</span>
                   </div>
                 ))}
