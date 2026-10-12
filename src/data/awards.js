@@ -3,6 +3,14 @@
 // data/awards.js
 export const AwardsData = [
     {
+        id: 7,
+        title: "Finalist of Duta Kampus ITB 2026",
+        description: "I was selected as a finalist of Duta Kampus ITB 2026, a program that chooses students to represent Institut Teknologi Bandung as campus ambassadors. Through a series of selection stages, I was assessed on academic achievement, leadership, public speaking, and my understanding of ITB's values, and given the chance to promote the campus to prospective students and the wider public.",
+        narasumber: "Institut Teknologi Bandung",
+        image: "/Awards/duta-itb.jpg",
+        link: ""
+    },
+    {
         id: 1,
         title: "Awardee of Beasiswa Unggulan 2025-2029 fully funded scholarship.",
         description: "I was awarded the Beasiswa Unggulan Kemendikbudristek 2025-2029 fully funded scholarship for undergraduate students. Received a fully funded scholarship for undergraduate studies. Recognized for academic excellence and potential",
@@ -46,7 +54,7 @@ export const AwardsData = [
         title: "Chairman HUT Teladan 66",
         description: "In 2024–2025, as the General Chair of the 66th Teladan Anniversary, I led a large-scale celebration that successfully united students, stakeholders, and the wider community. The event featured a sold-out theater performance involving seven extracurricular clubs, a talk show with the Rector of Universitas Gadjah Mada, and innovative programs like Teladan Action Day, widely covered by five newspapers. By coordinating 234 committee members, restructuring the organization for greater efficiency, and managing event finances effectively, the team achieved significant impact while generating sustainable profits for future programs.",
         narasumber: "SMAN 1 Teladan Yogyakarta",
-        image: "/Awards/hut.jpg",
+        image: "/Awards/Hut.jpg",
         link:"https://www.instagram.com/officialhutteladan68"
     },
     ]; 
