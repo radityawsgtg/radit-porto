@@ -70,7 +70,7 @@ export const AwardsData = [
         title: "Chairman HUT Teladan 66",
         description: "In 2024–2025, as the General Chair of the 66th Teladan Anniversary, I led a large-scale celebration that successfully united students, stakeholders, and the wider community. The event featured a sold-out theater performance involving seven extracurricular clubs, a talk show with the Rector of Universitas Gadjah Mada, and innovative programs like Teladan Action Day, widely covered by five newspapers. By coordinating 234 committee members, restructuring the organization for greater efficiency, and managing event finances effectively, the team achieved significant impact while generating sustainable profits for future programs.",
         narasumber: "SMAN 1 Teladan Yogyakarta",
-        image: "/Awards/Hut.jpg",
+        image: "/Awards/hut.jpg",
         link:"https://www.instagram.com/officialhutteladan68"
     },
     ]; 

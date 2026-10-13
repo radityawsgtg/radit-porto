@@ -45,7 +45,7 @@ export const ProjectWeb = [
     {
         id: 4,
         name: "SaTe Alumni Satu Teladan App",
-        imageUrl: "/images/sate.png",
+        imageUrl: "/images/Sate.png",
         projectUrl: "",
         description: "Built the frontend for a mobile app that connects alumni and current students of SMAN 1 Teladan Yogyakarta, with emphasis on responsive layouts, reusable components, and user-friendly design.",
         technologies: ["React", "Node.js", "MongoDB", "Express"]},
