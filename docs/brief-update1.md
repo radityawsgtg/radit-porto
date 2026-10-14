@@ -202,7 +202,8 @@ Letakkan pertama. Acaranya paling baru dan skalanya paling terlihat.
 - Tangkapan layar: `<ISI:>`
 - Catatan: kalau alur RSVP memang kalian yang bangun, tonjolkan. Ini satu-satunya
   proyek di daftar yang membuktikan tim bisa menangani alur transaksional, bukan
-  halaman statis saja.
+  halaman statis saja. okeh
+  
 
 ### 3. StudentsxCEOs Grand Summit
 
